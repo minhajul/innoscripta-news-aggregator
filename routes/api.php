@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\ArticlesController;
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\PasswordResetController;
 use App\Http\Controllers\Api\Auth\RegistrationController;
+use App\Http\Controllers\Api\PreferenceController;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,12 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
+
+    Route::get('/preferences', [PreferenceController::class, 'index']);
+    Route::post('/preferences/create', [PreferenceController::class, 'store']);
+    Route::get('/preferences/{preference}', [PreferenceController::class, 'show']);
+    Route::post('/preferences/{preference}/update', [PreferenceController::class, 'update']);
+    Route::delete('/preferences/{preference}', [PreferenceController::class, 'destroy']);
 });
 
 Route::get('/articles', [ArticlesController::class, 'index']);
