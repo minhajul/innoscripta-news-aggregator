@@ -27,7 +27,6 @@ return new class extends Migration {
             $table->index('slug');
             $table->index('source');
             $table->index('author');
-            $table->index('description');
         });
     }
 

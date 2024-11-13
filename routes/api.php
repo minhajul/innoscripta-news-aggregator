@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ArticlesController;
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\PasswordResetController;
 use App\Http\Controllers\Api\Auth\RegistrationController;
@@ -18,5 +19,9 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
         return $request->user();
     });
 });
+
+
+Route::get('/articles', [ArticlesController::class, 'index']);
+Route::get('/articles/{article:slug}', [ArticlesController::class, 'show']);
 
 

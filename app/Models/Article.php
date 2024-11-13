@@ -22,6 +22,4 @@ class Article extends Model
         'url',
         'image_url'
     ];
-
-
 }
