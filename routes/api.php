@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\PasswordResetController;
 use App\Http\Controllers\Api\Auth\RegistrationController;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/register', [RegistrationController::class, 'index']);
@@ -20,8 +21,13 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     });
 });
 
-
 Route::get('/articles', [ArticlesController::class, 'index']);
-Route::get('/articles/{article:slug}', [ArticlesController::class, 'show']);
+Route::get('/articles/{article:slug}', [ArticlesController::class, 'show'])
+    ->missing(function () {
+        return response()->json([
+            'success' => false,
+            'message' => 'Article not found',
+        ], Response::HTTP_NOT_FOUND);
+    });
 
 

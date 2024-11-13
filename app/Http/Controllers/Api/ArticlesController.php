@@ -45,7 +45,7 @@ class ArticlesController extends Controller
     public function show(Article $article)
     {
         return response()->json([
-            'success' => true,
+            'success' => (bool)$article,
             'data' => new ArticleResource($article),
         ]);
     }
