@@ -3,7 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return response()->json([
+        'success' => true,
+        'message' => 'Innoscripta News Aggregator APIs',
+        'version' => '1.0.0',
+        'ip' => request()->ip(),
+        'timestamp' => now()
+    ]);
 });
 
 
