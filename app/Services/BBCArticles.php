@@ -17,7 +17,7 @@ class BBCArticles implements NewsAggregatorServiceInterface
             $response = Http::get("https://feeds.bbci.co.uk/news/$query/rss.xml");
 
             if ($response->successful()) {
-                $this->storeArticles(simplexml_load_string($response->body()));
+                $this->storeArticles(simplexml_load_string($response->body()), $query);
             } else {
                 throw new Exception('Error fetching articles from BBC');
             }
@@ -26,7 +26,7 @@ class BBCArticles implements NewsAggregatorServiceInterface
         }
     }
 
-    public function storeArticles($articles): void
+    public function storeArticles($articles, $category): void
     {
         foreach ($articles->channel->item as $article) {
             Article::updateOrCreate(
@@ -37,7 +37,7 @@ class BBCArticles implements NewsAggregatorServiceInterface
                     'description' => (string)$article->description,
                     'url' => (string)$article->link,
                     'source' => 'BBC',
-                    'category' => $article,
+                    'category' => $category,
                     'author' => (string)$article->author ?? 'Unknown',
                 ]
             );
