@@ -19,15 +19,15 @@ class ArticleFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->sentence,
-            'slug' => Str::slug($this->faker->unique()->sentence),
-            'source' => $this->faker->company,
-            'author' => $this->faker->name,
-            'category' => $this->faker->word,
-            'content' => $this->faker->paragraphs(5, true),
-            'description' => $this->faker->paragraph,
-            'url' => $this->faker->url,
-            'image_url' => $this->faker->imageUrl(800, 600, 'articles', true, 'Faker'),
+            'title' => fake()->sentence,
+            'slug' => Str::slug(fake()->unique()->sentence),
+            'source' => fake()->company,
+            'author' => fake()->name,
+            'category' => fake()->word,
+            'content' => fake()->paragraphs(5, true),
+            'description' => fake()->paragraph,
+            'url' => fake()->url,
+            'image_url' => fake()->imageUrl(800, 600, 'articles', true, 'Faker'),
         ];
     }
 }

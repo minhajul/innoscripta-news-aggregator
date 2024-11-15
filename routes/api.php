@@ -24,7 +24,7 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::get('/preferences', [PreferenceController::class, 'index']);
     Route::post('/preferences/create', [PreferenceController::class, 'store']);
     Route::get('/preferences/{preference}', [PreferenceController::class, 'show']);
-    Route::post('/preferences/{preference}/update', [PreferenceController::class, 'update']);
+    Route::put('/preferences/{preference}/update', [PreferenceController::class, 'update']);
     Route::delete('/preferences/{preference}', [PreferenceController::class, 'destroy']);
 });
 

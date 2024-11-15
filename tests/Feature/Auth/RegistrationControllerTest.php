@@ -16,7 +16,7 @@ class RegistrationControllerTest extends TestCase
             'password' => 'password',
             'password_confirmation' => 'password',
         ]);
-        
+
         $response->assertStatus(200)
             ->assertJsonStructure([
                 'success',

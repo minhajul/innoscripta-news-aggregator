@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Preference;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,10 @@ class PreferenceFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'source' => fake()->name(),
+            'category' => fake()->word(),
+            'author' => fake()->name(),
+            'user_id' => User::factory(),
         ];
     }
 }
