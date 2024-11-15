@@ -8,7 +8,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Response;
 
-class PreferenceRequest extends FormRequest
+class LoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,9 +26,8 @@ class PreferenceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'source' => ['required', 'string', 'max:255'],
-            'category' => ['required', 'string', 'max:255'],
-            'author' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email'],
+            'password' => ['required', 'string'],
         ];
     }
 
