@@ -22,11 +22,8 @@ class LoginController extends Controller
     /**
      * Login
      *
-     * @param LoginRequest $request
-     * @return JsonResponse
      * @bodyParam email string required Insert email Example: test@example.com
      * @bodyParam password string required Insert password Example: password
-     *
      */
     public function index(LoginRequest $request): JsonResponse
     {
@@ -34,7 +31,7 @@ class LoginController extends Controller
             ->where('email', Str::lower($request->input('email')))
             ->first();
 
-        if (!$user) {
+        if (! $user) {
             return response()->json([
                 'success' => false,
                 'message' => 'We could not find any account with this email!',
@@ -42,7 +39,7 @@ class LoginController extends Controller
             ], Response::HTTP_BAD_REQUEST);
         }
 
-        if (!Hash::check($request->input('password'), $user->password)) {
+        if (! Hash::check($request->input('password'), $user->password)) {
             return response()->json([
                 'success' => false,
                 'message' => 'Credential does not match',
@@ -61,10 +58,7 @@ class LoginController extends Controller
     /**
      * Logout
      *
-     * @param Request $request
      * @authenticated
-     *
-     * @return JsonResponse
      */
     public function logout(Request $request): JsonResponse
     {

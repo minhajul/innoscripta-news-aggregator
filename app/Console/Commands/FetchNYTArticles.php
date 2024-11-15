@@ -32,6 +32,7 @@ class FetchNYTArticles extends Command
 
     /**
      * Execute the console command.
+     *
      * @throws Exception
      */
     public function handle(): void
@@ -39,10 +40,10 @@ class FetchNYTArticles extends Command
         $query = (string) $this->argument('query');
         $limit = (int) $this->option('limit');
 
-        $nyTimes = new NewYorkTimes();
+        $nyTimes = new NewYorkTimes;
 
         $nyTimes->fetchArticles($query, $limit);
 
-        $this->info("Stored news");
+        $this->info('Stored news');
     }
 }

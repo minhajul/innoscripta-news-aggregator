@@ -32,6 +32,7 @@ class FetchBBCArticles extends Command
 
     /**
      * Execute the console command.
+     *
      * @throws Exception
      */
     public function handle(): void
@@ -39,10 +40,10 @@ class FetchBBCArticles extends Command
         $category = (string) $this->argument('category');
         $limit = (int) $this->option('limit');
 
-        $bbc = new BBCArticles();
+        $bbc = new BBCArticles;
 
         $bbc->fetchArticles($category, $limit);
 
-        $this->info("Stored news");
+        $this->info('Stored news');
     }
 }

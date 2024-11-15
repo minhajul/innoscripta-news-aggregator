@@ -27,7 +27,7 @@ class TheGuardian implements NewsAggregatorServiceInterface
                 throw new Exception('Error fetching articles from NYT');
             }
         } catch (Exception $e) {
-            throw new Exception('Failed to fetch articles: ' . $e->getMessage());
+            throw new Exception('Failed to fetch articles: '.$e->getMessage());
         }
     }
 

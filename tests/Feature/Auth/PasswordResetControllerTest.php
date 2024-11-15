@@ -11,7 +11,7 @@ class PasswordResetControllerTest extends TestCase
     public function test_sends_a_reset_link_if_email_exists()
     {
         $user = User::factory()->create([
-            'email' => 'test@example.com'
+            'email' => 'test@example.com',
         ]);
 
         Password::shouldReceive('sendResetLink')
@@ -20,7 +20,7 @@ class PasswordResetControllerTest extends TestCase
             ->andReturn(Password::RESET_LINK_SENT);
 
         $response = $this->postJson('/api/password/email', [
-            'email' => $user->email
+            'email' => $user->email,
         ]);
 
         $response->assertStatus(200)
@@ -30,7 +30,7 @@ class PasswordResetControllerTest extends TestCase
     public function test_returns_error_if_email_does_not_exist()
     {
         $response = $this->postJson('/api/password/email', [
-            'email' => 'nonexistent@example.com'
+            'email' => 'nonexistent@example.com',
         ]);
 
         $response->assertStatus(404)
@@ -43,7 +43,7 @@ class PasswordResetControllerTest extends TestCase
     public function test_validates_the_email_field()
     {
         $response = $this->postJson('/api/password/email', [
-            'email' => 'not-an-email'
+            'email' => 'not-an-email',
         ]);
 
         $response->assertStatus(422)
@@ -73,7 +73,7 @@ class PasswordResetControllerTest extends TestCase
     {
         $user = User::factory()->create([
             'email' => 'test@example.com',
-            'email_verified_at' => now()
+            'email_verified_at' => now(),
         ]);
 
         Password::shouldReceive('reset')

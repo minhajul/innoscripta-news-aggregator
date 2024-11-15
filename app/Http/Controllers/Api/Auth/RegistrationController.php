@@ -18,14 +18,11 @@ class RegistrationController extends Controller
     /**
      * Registration
      *
-     * @param RegistrationRequest $request
      *
      * @bodyParam name string required Insert name Example: John Doe
      * @bodyParam email string required Insert email Example: test@example.com
      * @bodyParam password string required Insert password Example: password
      * @bodyParam password_confirmation string required Insert password confirmation Example: password
-     *
-     * @return JsonResponse
      */
     public function index(RegistrationRequest $request): JsonResponse
     {

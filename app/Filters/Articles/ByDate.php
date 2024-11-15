@@ -10,8 +10,7 @@ class ByDate
 {
     public function __construct(
         protected Request $request
-    )
-    {
+    ) {
         //
     }
 
@@ -20,7 +19,7 @@ class ByDate
         return $next($builder)
             ->when(
                 $this->request->input('date'),
-                fn($query) => $query->whereDate('created_at', $this->request->input('date'))
+                fn ($query) => $query->whereDate('created_at', $this->request->input('date'))
             );
     }
 }

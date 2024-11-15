@@ -24,17 +24,18 @@ class FetchGuardianArticles extends Command
 
     /**
      * Execute the console command.
+     *
      * @throws Exception
      */
     public function handle(): void
     {
-        $query = (string)$this->argument('query');
-        $limit = (int)$this->option('limit');
+        $query = (string) $this->argument('query');
+        $limit = (int) $this->option('limit');
 
-        $theGuardian = new TheGuardian();
+        $theGuardian = new TheGuardian;
 
         $theGuardian->fetchArticles($query, $limit);
 
-        $this->info("Stored news");
+        $this->info('Stored news');
     }
 }

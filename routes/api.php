@@ -6,7 +6,6 @@ use App\Http\Controllers\Api\Auth\PasswordResetController;
 use App\Http\Controllers\Api\Auth\RegistrationController;
 use App\Http\Controllers\Api\PreferenceController;
 use App\Http\Controllers\Api\UserController;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 
@@ -36,5 +35,3 @@ Route::get('/articles/{article:slug}', [ArticlesController::class, 'show'])
             'message' => 'Article not found',
         ], Response::HTTP_NOT_FOUND);
     });
-
-

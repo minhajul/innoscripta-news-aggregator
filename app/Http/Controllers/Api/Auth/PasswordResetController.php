@@ -7,8 +7,8 @@ use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Validator;
 
 /**
  * @group Authentication
@@ -20,10 +20,7 @@ class PasswordResetController extends Controller
     /**
      * Send Password Reset Link
      *
-     * @param Request $request
      * @bodyParam email string required Insert email Example: test@example.com
-     *
-     * @return JsonResponse
      */
     public function sendResetLink(Request $request): JsonResponse
     {
@@ -33,7 +30,7 @@ class PasswordResetController extends Controller
             ->where('email', $request->input('email'))
             ->first();
 
-        if (!$user) {
+        if (! $user) {
             return response()->json([
                 'success' => false,
                 'data' => 'We can not find any account with this email',
@@ -52,18 +49,15 @@ class PasswordResetController extends Controller
     /**
      * Reset Password
      *
-     * @param Request $request
      * @bodyParam email string required Insert email Example: test@example.com
      * @bodyParam password string required Insert password Example: password
      * @bodyParam password_confirmation string required Insert password confirmation Example: password
-     *
-     * @return JsonResponse
      */
     public function resetPassword(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
             'email' => ['required', 'email'],
-            'password' => ['required', 'confirmed']
+            'password' => ['required', 'confirmed'],
         ]);
 
         if ($validator->fails()) {
@@ -78,11 +72,11 @@ class PasswordResetController extends Controller
             ->where('email', $request->input('email'))
             ->first();
 
-        if (!$user) {
+        if (! $user) {
             return response()->json([
                 'success' => false,
                 'message' => 'We can not find any account with this email',
-                'data' => null
+                'data' => null,
             ], Response::HTTP_NOT_FOUND);
         }
 

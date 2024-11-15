@@ -11,7 +11,7 @@ class ArticlesControllerTest extends TestCase
     {
         $articles = Article::factory()->count(50)->create();
 
-        $response = $this->getJson("/api/articles");
+        $response = $this->getJson('/api/articles');
 
         $response->assertStatus(200);
 
@@ -21,7 +21,7 @@ class ArticlesControllerTest extends TestCase
 
     public function test_index_returns_404_when_no_articles_exist()
     {
-        $response = $this->getJson("/api/articles/test");
+        $response = $this->getJson('/api/articles/test');
 
         $response->assertStatus(404);
     }
@@ -37,7 +37,7 @@ class ArticlesControllerTest extends TestCase
 
     public function test_show_returns_404_for_nonexistent_article()
     {
-        $response = $this->getJson("/api/articles/no-article");
+        $response = $this->getJson('/api/articles/no-article');
 
         $response->assertStatus(404);
     }

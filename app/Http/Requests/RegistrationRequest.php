@@ -37,7 +37,7 @@ class RegistrationRequest extends FormRequest
                     ->numbers()
                     ->symbols()
                     ->uncompromised(),
-                'confirmed'
+                'confirmed',
             ],
         ];
     }

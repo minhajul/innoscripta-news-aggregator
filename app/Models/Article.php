@@ -21,7 +21,7 @@ class Article extends Model
         'content',
         'description',
         'url',
-        'image_url'
+        'image_url',
     ];
 
     protected static function boot(): void

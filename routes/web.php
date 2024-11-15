@@ -8,7 +8,7 @@ Route::get('/', function () {
         'message' => 'Innoscripta News Aggregator APIs',
         'version' => '1.0.0',
         'ip' => request()->ip(),
-        'timestamp' => now()
+        'timestamp' => now(),
     ]);
 });
 
@@ -18,4 +18,3 @@ Route::get('/password/reset/{token}', function ($token) {
         'token' => $token,
     ]);
 })->name('password.reset');
-

@@ -22,7 +22,7 @@ class BBCArticles implements NewsAggregatorServiceInterface
                 throw new Exception('Error fetching articles from BBC');
             }
         } catch (Exception $e) {
-            throw new Exception('Failed to fetch articles: ' . $e->getMessage());
+            throw new Exception('Failed to fetch articles: '.$e->getMessage());
         }
     }
 
@@ -30,15 +30,15 @@ class BBCArticles implements NewsAggregatorServiceInterface
     {
         foreach ($articles->channel->item as $article) {
             Article::updateOrCreate(
-                ['url' => (string)$article->link],
+                ['url' => (string) $article->link],
                 [
-                    'title' => (string)$article->title,
-                    'content' => (string)$article->description,
-                    'description' => (string)$article->description,
-                    'url' => (string)$article->link,
+                    'title' => (string) $article->title,
+                    'content' => (string) $article->description,
+                    'description' => (string) $article->description,
+                    'url' => (string) $article->link,
                     'source' => 'BBC',
                     'category' => $category,
-                    'author' => (string)$article->author ?: 'Unknown'
+                    'author' => (string) $article->author ?: 'Unknown',
                 ]
             );
         }

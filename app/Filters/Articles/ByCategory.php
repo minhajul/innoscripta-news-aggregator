@@ -10,8 +10,7 @@ class ByCategory
 {
     public function __construct(
         protected Request $request
-    )
-    {
+    ) {
         //
     }
 
@@ -20,7 +19,7 @@ class ByCategory
         return $next($builder)
             ->when(
                 $this->request->input('category'),
-                fn($query) => $query->where('category', 'LIKE', "%{$this->request->input('category')}%")
+                fn ($query) => $query->where('category', 'LIKE', "%{$this->request->input('category')}%")
             );
     }
 }

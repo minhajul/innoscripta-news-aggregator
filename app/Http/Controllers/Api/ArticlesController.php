@@ -24,7 +24,6 @@ class ArticlesController extends Controller
     /**
      * Get Articles
      *
-     * @param Request $request
      *
      * @return JsonResponse
      */
@@ -43,7 +42,7 @@ class ArticlesController extends Controller
             ->paginate(30);
 
         return response()->json([
-            'success' => (bool)$articles->count(),
+            'success' => (bool) $articles->count(),
             'message' => 'Request successful',
             'data' => ArticleResource::collection($articles),
             'meta' => [
@@ -52,7 +51,7 @@ class ArticlesController extends Controller
                 'per_page' => $articles->perPage(),
                 'current_page' => $articles->currentPage(),
                 'last_page' => $articles->lastPage(),
-            ]
+            ],
         ], $articles->count() ? Response::HTTP_OK : Response::HTTP_NOT_FOUND);
     }
 
@@ -66,7 +65,7 @@ class ArticlesController extends Controller
     public function show(Article $article)
     {
         return response()->json([
-            'success' => (bool)$article,
+            'success' => (bool) $article,
             'message' => 'Request successful',
             'data' => new ArticleResource($article),
         ]);

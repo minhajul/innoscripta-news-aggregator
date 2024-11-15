@@ -21,9 +21,9 @@ class UserController extends Controller
     /**
      * User Profile
      *
-     * @param Request $request
      *
      * @authenticated
+     *
      * @return JsonResponse
      */
     public function __invoke(Request $request)
@@ -38,9 +38,9 @@ class UserController extends Controller
     /**
      * Preferred Articles for User
      *
-     * @param Request $request
      *
      * @authenticated
+     *
      * @return JsonResponse
      */
     public function getArticlesByPreferences(Request $request)
@@ -53,7 +53,7 @@ class UserController extends Controller
             return response()->json([
                 'success' => false,
                 'data' => null,
-                'message' => 'No preferences found'
+                'message' => 'No preferences found',
             ], Response::HTTP_NOT_FOUND);
         }
 
@@ -73,14 +73,14 @@ class UserController extends Controller
             return response()->json([
                 'success' => false,
                 'data' => null,
-                'message' => 'No articles found'
+                'message' => 'No articles found',
             ], Response::HTTP_NOT_FOUND);
         }
 
         return response()->json([
             'success' => true,
             'message' => 'Request successful',
-            'data' => ArticleResource::collection($articles)
+            'data' => ArticleResource::collection($articles),
         ]);
     }
 }

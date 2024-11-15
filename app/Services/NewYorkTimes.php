@@ -4,8 +4,8 @@ namespace App\Services;
 
 use App\Models\Article;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Http;
 use Exception;
+use Illuminate\Support\Facades\Http;
 
 class NewYorkTimes implements NewsAggregatorServiceInterface
 {
@@ -18,7 +18,7 @@ class NewYorkTimes implements NewsAggregatorServiceInterface
             $response = Http::get('https://api.nytimes.com/svc/search/v2/articlesearch.json', [
                 'q' => $query,
                 'api-key' => config('services.nytimes.api_key'),
-                'limit' => $limit
+                'limit' => $limit,
             ]);
 
             if ($response->successful()) {
@@ -27,7 +27,7 @@ class NewYorkTimes implements NewsAggregatorServiceInterface
                 throw new Exception('Error fetching articles from NYT');
             }
         } catch (Exception $e) {
-            throw new Exception('Failed to fetch articles: ' . $e->getMessage());
+            throw new Exception('Failed to fetch articles: '.$e->getMessage());
         }
     }
 

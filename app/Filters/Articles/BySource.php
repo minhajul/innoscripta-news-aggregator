@@ -10,8 +10,7 @@ class BySource
 {
     public function __construct(
         protected Request $request
-    )
-    {
+    ) {
         //
     }
 
@@ -20,7 +19,7 @@ class BySource
         return $next($builder)
             ->when(
                 $this->request->input('source'),
-                fn($query) => $query->where('source', 'LIKE', "%{$this->request->input('source')}%")
+                fn ($query) => $query->where('source', 'LIKE', "%{$this->request->input('source')}%")
             );
     }
 }

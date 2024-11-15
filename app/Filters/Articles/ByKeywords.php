@@ -10,8 +10,7 @@ class ByKeywords
 {
     public function __construct(
         protected Request $request
-    )
-    {
+    ) {
         //
     }
 
@@ -20,7 +19,7 @@ class ByKeywords
         return $next($builder)
             ->when(
                 $this->request->input('keywords'),
-                fn($query) => $query->whereLike(['title', 'content', 'description'], $this->request->input('keywords'))
+                fn ($query) => $query->whereLike(['title', 'content', 'description'], $this->request->input('keywords'))
             );
     }
 }

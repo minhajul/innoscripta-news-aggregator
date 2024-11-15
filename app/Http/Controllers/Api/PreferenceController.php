@@ -20,9 +20,9 @@ class PreferenceController extends Controller
     /**
      * Get Preferences
      *
-     * @param Request $request
      *
      * @authenticated
+     *
      * @return JsonResponse
      */
     public function index(Request $request)
@@ -30,7 +30,7 @@ class PreferenceController extends Controller
         $preferences = $request->user()->preferences;
 
         return response()->json([
-            'success' => (bool)$preferences->count(),
+            'success' => (bool) $preferences->count(),
             'message' => $preferences->count() ? 'Request successful' : 'No preference found',
             'data' => PreferenceResource::collection($preferences),
         ], $preferences->count() ? Response::HTTP_OK : Response::HTTP_NOT_FOUND);
@@ -39,12 +39,12 @@ class PreferenceController extends Controller
     /**
      * Create Preference
      *
-     * @param PreferenceRequest $request
      * @bodyParam source string required Insert source Example: BBC
      * @bodyParam category string required Insert category Example: tech
      * @bodyParam author string required Insert author Example: Mr. X
      *
      * @authenticated
+     *
      * @return JsonResponse
      */
     public function store(PreferenceRequest $request)
@@ -65,9 +65,9 @@ class PreferenceController extends Controller
     /**
      * Get Single Preference
      *
-     * @param Preference $preference
      *
      * @authenticated
+     *
      * @return JsonResponse
      */
     public function show(Preference $preference)
@@ -82,14 +82,13 @@ class PreferenceController extends Controller
     /**
      * Update Preference
      *
-     * @param PreferenceRequest $request
-     * @param Preference $preference
      *
      * @bodyParam source string required Insert source Example: BBC
      * @bodyParam category string required Insert category Example: tech
      * @bodyParam author string required Insert author Example: Mr. X
      *
      * @authenticated
+     *
      * @return JsonResponse
      */
     public function update(PreferenceRequest $request, Preference $preference)
@@ -107,9 +106,9 @@ class PreferenceController extends Controller
     /**
      * Destroy Preference
      *
-     * @param Preference $preference
      *
      * @authenticated
+     *
      * @return JsonResponse
      */
     public function destroy(Preference $preference)
@@ -119,7 +118,7 @@ class PreferenceController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Request successful',
-            'data' => "Preference has been deleted."
+            'data' => 'Preference has been deleted.',
         ]);
     }
 }
