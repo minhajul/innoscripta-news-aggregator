@@ -13,7 +13,7 @@ class FetchBBCArticles extends Command
      *
      * @var string
      */
-    protected $signature = 'app:fetch-bbc-articles {query} {--limit=5}';
+    protected $signature = 'app:fetch-bbc-articles {category} {--limit=5}';
 
     /**
      * The console command description.
