@@ -36,8 +36,8 @@ class FetchBBCArticles extends Command
      */
     public function handle(): void
     {
-        $category = $this->argument('category');
-        $limit = $this->option('limit');
+        $category = (string) $this->argument('category');
+        $limit = (int) $this->option('limit');
 
         $bbc = new BBCArticles();
 

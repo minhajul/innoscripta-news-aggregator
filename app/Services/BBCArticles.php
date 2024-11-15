@@ -38,7 +38,7 @@ class BBCArticles implements NewsAggregatorServiceInterface
                     'url' => (string)$article->link,
                     'source' => 'BBC',
                     'category' => $category,
-                    'author' => (string)$article->author ?? 'Unknown',
+                    'author' => (string)$article->author ?: 'Unknown'
                 ]
             );
         }

@@ -2,9 +2,12 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Request;
+use App\Models\Preference;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * @mixin Preference
+ */
 class PreferenceResource extends JsonResource
 {
     public function toArray($request): array

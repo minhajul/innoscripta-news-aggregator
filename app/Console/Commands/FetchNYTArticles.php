@@ -36,8 +36,8 @@ class FetchNYTArticles extends Command
      */
     public function handle(): void
     {
-        $query = $this->argument('query');
-        $limit = $this->option('limit');
+        $query = (string) $this->argument('query');
+        $limit = (int) $this->option('limit');
 
         $nyTimes = new NewYorkTimes();
 
