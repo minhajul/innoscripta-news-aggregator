@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\PasswordResetController;
 use App\Http\Controllers\Api\Auth\RegistrationController;
 use App\Http\Controllers\Api\PreferenceController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
@@ -17,9 +18,8 @@ Route::post('/password/reset', [PasswordResetController::class, 'resetPassword']
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post('/logout', [LoginController::class, 'logout']);
 
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
+    Route::get('/user', [UserController::class]);
+    Route::get('/user/preferred/articles', [UserController::class, 'getArticlesByPreferences']);
 
     Route::get('/preferences', [PreferenceController::class, 'index']);
     Route::post('/preferences/create', [PreferenceController::class, 'store']);

@@ -44,6 +44,7 @@ class ArticlesController extends Controller
 
         return response()->json([
             'success' => (bool)$articles->count(),
+            'message' => 'Request successful',
             'data' => ArticleResource::collection($articles),
             'meta' => [
                 'total' => $articles->total(),
@@ -66,6 +67,7 @@ class ArticlesController extends Controller
     {
         return response()->json([
             'success' => (bool)$article,
+            'message' => 'Request successful',
             'data' => new ArticleResource($article),
         ]);
     }

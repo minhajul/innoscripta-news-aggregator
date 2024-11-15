@@ -17,7 +17,6 @@ use Illuminate\Support\Str;
  *
  * APIs for managing authentication
  */
-
 class LoginController extends Controller
 {
     /**
@@ -39,6 +38,7 @@ class LoginController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'success' => false,
+                'message' => 'Validation error',
                 'data' => $validator->errors(),
             ], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
@@ -50,19 +50,22 @@ class LoginController extends Controller
         if (!$user) {
             return response()->json([
                 'success' => false,
-                'data' => 'We could not find any account with this email!',
+                'message' => 'We could not find any account with this email!',
+                'data' => null,
             ], Response::HTTP_BAD_REQUEST);
         }
 
         if (!Hash::check($request->input('password'), $user->password)) {
             return response()->json([
                 'success' => false,
-                'data' => 'Credential does not match',
+                'message' => 'Credential does not match',
+                'data' => null,
             ], Response::HTTP_UNAUTHORIZED);
         }
 
         return response()->json([
             'success' => true,
+            'message' => 'Request successful',
             'data' => new UserResource($user),
             'access_token' => $user->createToken('PersonalAccessToken')->plainTextToken,
         ]);

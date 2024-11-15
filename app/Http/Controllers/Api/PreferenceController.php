@@ -30,6 +30,7 @@ class PreferenceController extends Controller
 
         return response()->json([
             'success' => (bool)$preferences->count(),
+            'message' => $preferences->count() ? 'Request successful' : 'No preference found',
             'data' => PreferenceResource::collection($preferences),
         ], $preferences->count() ? Response::HTTP_OK : Response::HTTP_NOT_FOUND);
     }
@@ -55,6 +56,7 @@ class PreferenceController extends Controller
 
         return response()->json([
             'success' => true,
+            'message' => 'Request successful',
             'data' => new PreferenceResource($preference),
         ]);
     }
@@ -71,6 +73,7 @@ class PreferenceController extends Controller
     {
         return response()->json([
             'success' => true,
+            'message' => 'Request successful',
             'data' => new PreferenceResource($preference),
         ]);
     }
@@ -95,6 +98,7 @@ class PreferenceController extends Controller
 
         return response()->json([
             'success' => true,
+            'message' => 'Request successful',
             'data' => new PreferenceResource($preference),
         ]);
     }
@@ -113,6 +117,7 @@ class PreferenceController extends Controller
 
         return response()->json([
             'success' => true,
+            'message' => 'Request successful',
             'data' => "Preference has been deleted."
         ]);
     }

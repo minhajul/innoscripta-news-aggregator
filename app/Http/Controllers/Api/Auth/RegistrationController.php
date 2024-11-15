@@ -15,7 +15,6 @@ use Illuminate\Http\JsonResponse;
  */
 class RegistrationController extends Controller
 {
-
     /**
      * Registration
      *
@@ -38,6 +37,7 @@ class RegistrationController extends Controller
 
         return response()->json([
             'success' => true,
+            'message' => 'Request successful',
             'data' => new UserResource($user),
             'access_token' => $user->createToken('PersonalAccessToken')->plainTextToken,
         ]);
