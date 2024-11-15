@@ -12,8 +12,22 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
+/**
+ * @group Authentication
+ *
+ * APIs for managing authentication
+ */
 class LoginController extends Controller
 {
+    /**
+     * Login
+     *
+     * @param Request $request
+     * @bodyParam email string required Insert email Example: test@example.com
+     * @bodyParam password string required Insert password Example: password
+     *
+     * @return JsonResponse
+     */
     public function index(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -53,6 +67,14 @@ class LoginController extends Controller
         ]);
     }
 
+    /**
+     * Logout
+     *
+     * @param Request $request
+     * @authenticated
+     *
+     * @return JsonResponse
+     */
     public function logout(Request $request): JsonResponse
     {
         $request->user()->tokens()->delete();

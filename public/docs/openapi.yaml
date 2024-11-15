@@ -1,0 +1,1236 @@
+openapi: 3.0.3
+info:
+  title: 'Innoscripta News Aggregator API Docs'
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://innoscripta-news-aggregator.test'
+paths:
+  /api/articles:
+    get:
+      summary: 'Get Articles'
+      operationId: getArticles
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  data:
+                    -
+                      id: 1
+                      title: 'Quia qui molestiae aliquam dolorum.'
+                      slug: quas-recusandae-soluta-inventore-ut-perspiciatis-doloribus
+                      source: 'Braun, Parker and Abbott'
+                      author: 'Gia Leannon'
+                      category: quo
+                      content: "Cupiditate similique non laborum ad. Et molestias doloribus et cumque officiis. Repellat porro et ut ratione consequatur tenetur nulla sed.\n\nEst excepturi unde voluptas minima iste modi. Et qui a aut est eos. Voluptatem eos id deserunt. Ut ipsum magnam sed fuga aspernatur consectetur qui. Modi consequatur ipsam aliquid nobis a sit necessitatibus.\n\nEarum voluptatem rem ipsum laudantium sed. Excepturi nostrum ut veniam debitis ut sit repellendus.\n\nSapiente sunt repudiandae in corporis. Aut itaque quae deserunt laboriosam voluptatem est. Totam nam sunt reprehenderit architecto saepe culpa sint.\n\nBeatae nihil minima ea voluptatem earum corporis vel. Sunt voluptas sapiente quasi ea et rerum magnam. Corporis corrupti labore numquam natus ut quidem et cum."
+                      description: 'Omnis ratione delectus magnam rerum sunt minus corporis. Sit et beatae ut. Repellat non tenetur quia modi. Rerum culpa quod qui facilis.'
+                      url: 'https://veum.com/nisi-temporibus-quam-delectus-dolorum-rem-rerum-cum.html'
+                      image_url: 'https://via.placeholder.com/800x600.png/001177?text=articles+Faker+similique'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 2
+                      title: 'Similique eos doloribus ab error quis amet quod aliquam.'
+                      slug: inventore-aut-ea-ducimus-esse-est
+                      source: 'Hirthe Ltd'
+                      author: 'Erick Hoeger'
+                      category: dolorum
+                      content: "Cupiditate magnam nesciunt eum soluta. Est quidem quis placeat qui. Sint dignissimos eos animi.\n\nSunt est distinctio accusantium doloremque provident optio. Sapiente quisquam dignissimos veritatis accusantium ipsum dolores. Aut sit est voluptatibus a ex consequatur. Qui laborum architecto explicabo aut commodi a.\n\nMolestiae ut odit fugiat nihil ut totam voluptatem. Asperiores quas aliquid ab minus. Facere voluptatem quia perferendis reiciendis aliquid fugit sit. Quam sed omnis minima iste. Perspiciatis cumque qui pariatur reiciendis facilis facilis.\n\nNostrum id quia doloremque. Rerum porro aut earum totam maiores quo sit qui. Eaque sit maiores nihil consequatur. Et in enim alias dolor ullam sint alias.\n\nBeatae soluta ea est. Officia cupiditate voluptatem voluptas sunt et. Distinctio corrupti ex rerum commodi aut."
+                      description: 'Perferendis debitis non error ut suscipit. Omnis pariatur qui dolor qui. Explicabo quo deleniti aut ipsa. Qui ut vitae reiciendis inventore sed non et.'
+                      url: 'http://boyer.com/'
+                      image_url: 'https://via.placeholder.com/800x600.png/005566?text=articles+Faker+aliquam'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 3
+                      title: 'Facere nemo beatae non temporibus rerum et molestias.'
+                      slug: error-quisquam-reprehenderit-ea-voluptatem-voluptas-quia-modi
+                      source: Gleason-Klein
+                      author: 'Dr. Macie Raynor V'
+                      category: soluta
+                      content: "Neque ipsa unde dolor doloribus. Possimus ut ea eius vel qui alias. Voluptatem dolorem sequi vel fugiat. Sint deserunt ipsa quas mollitia omnis.\n\nAutem et et libero. Ad in est cum earum quis aut animi omnis. Nemo expedita odio vel autem explicabo. Ad sed non similique pariatur rerum qui.\n\nLaboriosam provident quia pariatur voluptates est magni quasi. Eveniet non corrupti labore. Ipsum qui ut est consequuntur sed laudantium.\n\nPraesentium aliquid hic dolorem ab sit. Blanditiis autem et placeat eum. Ut deserunt ut consequuntur. Sed dolor distinctio distinctio. Autem sint consequatur sunt rem occaecati aliquid reprehenderit.\n\nIste in dolores deleniti. Doloribus illum non debitis ea. Non nisi veniam illo quia veniam excepturi."
+                      description: 'Aut officia earum et. Sint modi occaecati debitis omnis animi numquam tempore. Quis odit vero et perspiciatis eaque quia deserunt. Hic sint rerum ex consequatur quaerat.'
+                      url: 'http://www.mclaughlin.com/'
+                      image_url: 'https://via.placeholder.com/800x600.png/00ee00?text=articles+Faker+voluptatem'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 4
+                      title: 'Quis harum nam enim qui laboriosam sapiente.'
+                      slug: corrupti-pariatur-porro-error-occaecati-esse
+                      source: Bartoletti-Heathcote
+                      author: 'Deron Bahringer'
+                      category: doloremque
+                      content: "Repellendus omnis quo nihil non atque sit omnis. Sed reiciendis facere nisi aut possimus. Earum nobis ut animi culpa labore reprehenderit corporis.\n\nTemporibus deleniti unde omnis magni sint sit. At quis quo ducimus et accusantium eaque id et. Voluptatem molestiae laudantium ut ad eum. Possimus enim consequatur est quos repellat aut. Aliquid ipsa qui eius et labore.\n\nVoluptatem nemo aspernatur tenetur voluptas. Temporibus voluptas incidunt vitae.\n\nIpsam itaque ut eos at quia temporibus ullam. Aut suscipit laborum atque fuga quia. Eius quaerat fuga ipsa. Reiciendis cumque facere nihil at adipisci eligendi perspiciatis tempore.\n\nAut nihil quod aperiam voluptatem. Voluptas aperiam in itaque. Unde quidem non eos qui facilis iste quam. Est quia sunt explicabo."
+                      description: 'Et ex eaque sunt dolor dolor rerum itaque. Quos quam praesentium amet labore ipsum. Quibusdam rem est nisi molestiae enim. Soluta et doloribus est velit culpa.'
+                      url: 'http://www.deckow.com/'
+                      image_url: 'https://via.placeholder.com/800x600.png/00aaff?text=articles+Faker+optio'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 5
+                      title: 'Vero qui esse et velit consequatur saepe nesciunt.'
+                      slug: ipsam-quod-id-corrupti-et
+                      source: 'Funk, Roberts and Auer'
+                      author: 'Prof. Gaston Kessler'
+                      category: doloribus
+                      content: "Quam veritatis ducimus aut sed doloremque inventore. Ipsum quis necessitatibus earum rem sequi sit eius. Voluptate eum sunt sit qui consectetur ea beatae. Enim rem dignissimos impedit id unde id in a.\n\nDolore consequatur earum corrupti ut totam. Reprehenderit dolore enim quam aliquid et sint laborum. Deserunt nihil sequi est rerum qui.\n\nEt est error consequatur quod sed repellendus omnis. Cum nam repudiandae commodi perferendis. Ullam et aut quia molestiae rerum blanditiis voluptatem quis. Voluptatum suscipit voluptatem esse a.\n\nDeleniti delectus doloribus provident distinctio. Enim pariatur ea aut cumque dolor excepturi. Nihil et blanditiis tempora et iste corporis. Harum nemo adipisci temporibus nesciunt.\n\nDoloribus voluptates vel quia et quasi. Expedita corporis nesciunt itaque est voluptates ratione. Tenetur eaque id consequuntur ratione est blanditiis ab."
+                      description: 'Deserunt aut totam dolorum ipsum. Perferendis et officia commodi accusamus aut officia. Cum quia dolorum aut rerum beatae saepe quos consequuntur. Dolores eos sequi eligendi enim.'
+                      url: 'http://muller.com/fugit-itaque-qui-incidunt-cum-est-necessitatibus-soluta'
+                      image_url: 'https://via.placeholder.com/800x600.png/0044cc?text=articles+Faker+minus'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 6
+                      title: 'Ut voluptas commodi aut voluptates velit tempora assumenda.'
+                      slug: rem-hic-architecto-est-minima-quos
+                      source: Cummings-Ruecker
+                      author: 'Damon Ledner'
+                      category: velit
+                      content: "Et ipsam at nostrum ad quasi voluptatum. Voluptatibus eaque alias illum reprehenderit qui. Officiis et magni iste. Qui quisquam animi impedit et.\n\nRepellat suscipit minus earum iure dolore. Numquam hic aut atque deleniti voluptatibus aspernatur voluptas. In ex voluptatem rerum a dolorum dolorem. Harum doloremque consectetur iure et placeat.\n\nNihil distinctio accusamus est saepe consequatur nostrum et. Ea consequatur enim architecto culpa in est. Quia quod fuga eveniet voluptatem quod rem pariatur nihil.\n\nFuga unde fugiat quasi necessitatibus. Sit veniam enim nemo ab quia. Eveniet sapiente repellendus sit cum qui. Aliquid sed voluptatem sunt et ullam.\n\nAccusantium consequatur quasi quae. Et ratione consequatur error error sunt."
+                      description: 'Aperiam et sit eius tempora. Qui totam hic aspernatur quaerat vel.'
+                      url: 'http://www.mann.com/blanditiis-est-et-ut-quaerat.html'
+                      image_url: 'https://via.placeholder.com/800x600.png/004400?text=articles+Faker+omnis'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 7
+                      title: 'Molestiae ipsam expedita excepturi laudantium accusamus voluptatum.'
+                      slug: sint-sed-incidunt-esse-repellat-ipsam-culpa
+                      source: "O'Keefe Ltd"
+                      author: 'Dr. Myah Dietrich Sr.'
+                      category: minus
+                      content: "Quo adipisci reiciendis consectetur non consequatur dolorem ut commodi. Et repellat vel inventore. Et ad nesciunt veniam repudiandae consequatur quos magnam. Dolor repudiandae et soluta consectetur quo.\n\nDolorem impedit aut id ipsa. Sit nobis illum ducimus sunt atque et sunt. Dolorem est in aut tempora debitis voluptas.\n\nEligendi quasi ratione impedit assumenda error. Doloribus ea eligendi sequi.\n\nDeserunt minus mollitia impedit distinctio vel voluptatem. Accusantium sunt nihil eum. Vero sequi similique corrupti esse iste deleniti. Asperiores excepturi voluptates magnam corrupti. Ducimus quia qui et minima inventore quam quaerat.\n\nFacilis nobis aut doloremque deserunt. Rerum quis corrupti ut eaque aliquam velit. Deleniti itaque nisi nobis nulla possimus enim quo voluptatem. Commodi quis ea ut."
+                      description: 'Aut sit esse quia commodi enim. Alias corrupti hic delectus mollitia dolores veritatis quisquam. Esse et delectus id esse itaque eos beatae.'
+                      url: 'http://www.treutel.com/excepturi-modi-libero-eligendi-eaque-laudantium-qui'
+                      image_url: 'https://via.placeholder.com/800x600.png/00ff11?text=articles+Faker+neque'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 8
+                      title: 'Odio eum nemo asperiores a id quos.'
+                      slug: ad-veritatis-eius-velit-autem
+                      source: Yundt-Mueller
+                      author: 'Tamara Robel I'
+                      category: et
+                      content: "Quia sint dolores atque quisquam accusantium sed illo et. Dolores ea non voluptatem quas. Magnam quidem distinctio fugit voluptate expedita dolor magnam quo.\n\nOfficiis voluptate quod consectetur qui. Placeat minus quis doloremque inventore quidem recusandae minus. Expedita excepturi nisi ea ea ullam modi aut sit. Doloribus voluptate officia quod.\n\nAdipisci ipsam laborum expedita necessitatibus ratione. Alias illo quae dolores consequatur fugiat. Et omnis nostrum et vel.\n\nEt et voluptatem aut minus sit facilis. Quod ut eum molestias omnis laudantium ex aut iure. Eos qui necessitatibus aut sit provident dolor voluptatem.\n\nAut rerum voluptatibus sunt animi voluptatum dolorem recusandae. Quaerat porro sit quae dolores et. Quis velit quam alias qui accusamus nemo et sed."
+                      description: 'Nemo blanditiis eos voluptatem non consequatur ut sapiente porro. Perferendis id sed aut reprehenderit voluptas alias eos distinctio. Et unde voluptatibus ratione quam quibusdam sint ratione.'
+                      url: 'http://herman.info/ea-ut-esse-ipsam-laborum-rem-vero-dolorem-et.html'
+                      image_url: 'https://via.placeholder.com/800x600.png/009988?text=articles+Faker+corrupti'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 9
+                      title: 'Mollitia voluptas veniam ad.'
+                      slug: quia-molestiae-illo-iste-exercitationem-voluptatem-dolor-incidunt
+                      source: White-Pacocha
+                      author: 'Mr. Joey Kunde'
+                      category: deleniti
+                      content: "Qui laborum ab voluptatibus dolores labore nihil explicabo. Delectus quisquam qui ratione et architecto dolores quod. Ut quasi aperiam accusamus pariatur qui omnis.\n\nPlaceat quisquam magni et dolorem impedit sit et. Repellat rerum et enim vero sint quia. Voluptates et sint dolores itaque et aut qui quaerat.\n\nTempore omnis molestiae rerum. Aut est minima perspiciatis excepturi. Labore ex facilis eaque ea eum quis. Qui sed commodi aut est aperiam.\n\nConsequuntur accusamus consequuntur qui placeat corporis deserunt. Aspernatur dicta debitis quia ducimus consequatur. Ut libero et in at eum. Non rem maxime culpa non dicta beatae.\n\nNesciunt eligendi quis eum laborum labore nam. Odit nisi nam dignissimos. Possimus praesentium sit veritatis ut incidunt."
+                      description: 'Consectetur qui nam eos facere maxime et omnis. Laborum quo ratione voluptatem est vero esse beatae. Rem voluptatem fugit laboriosam ut ut omnis suscipit.'
+                      url: 'http://www.hammes.biz/'
+                      image_url: 'https://via.placeholder.com/800x600.png/004499?text=articles+Faker+excepturi'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 10
+                      title: 'Nobis quas sunt non aliquam error eaque.'
+                      slug: est-ab-aperiam-dolorem-reiciendis-aut-cumque
+                      source: 'Effertz, Collins and Orn'
+                      author: 'Stephon Turcotte III'
+                      category: sapiente
+                      content: "Soluta tempore dolorem dicta. Et est sit neque accusantium. Et sint quae dolores laudantium. Similique officiis quo nihil ab amet et est. Dolor ipsam aut distinctio est ab itaque.\n\nNobis nostrum tempora inventore dolore rem. Qui commodi perspiciatis voluptatem molestiae deserunt harum quas. Quos doloremque sit placeat libero. Dolor ut est voluptas consequatur eos.\n\nSed nemo voluptatem magnam maxime. Odit dolorem dolorem tempore totam ut. Rem quis reprehenderit recusandae eos. Harum placeat voluptas ea a.\n\nQuis aut quo fugit nostrum repudiandae. Delectus sit reiciendis aut harum esse voluptas laboriosam officia. Quo qui omnis ab eligendi est minima. Omnis rerum vel quidem neque.\n\nAspernatur quae voluptatem magnam ut vel. Est assumenda nobis ducimus aut ut sunt mollitia laborum. Velit omnis et accusantium sint explicabo eos et. Molestias dolores explicabo eos voluptatum. Accusamus corrupti ut facilis placeat inventore inventore aut."
+                      description: 'Autem aut dolores enim hic. Ex nulla eum eius sunt hic est et reprehenderit. Quia commodi odit eum sint id. Ut nostrum quia pariatur aut.'
+                      url: 'http://www.streich.com/'
+                      image_url: 'https://via.placeholder.com/800x600.png/00cccc?text=articles+Faker+omnis'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 11
+                      title: 'Cumque qui consequatur similique vero.'
+                      slug: maxime-omnis-ab-voluptate-dicta
+                      source: 'Grady, Spencer and Nikolaus'
+                      author: 'Miss Hilda Schumm'
+                      category: quasi
+                      content: "Voluptatum exercitationem aut sint voluptas. Labore hic fuga enim odio dolor id. Aperiam sunt ea alias quia.\n\nPerferendis soluta sapiente non quam nesciunt consequatur. Minus officiis quaerat maiores.\n\nCommodi minima et facilis velit sequi. Architecto iusto accusantium eos aut. Ullam itaque est aperiam molestiae.\n\nPerspiciatis dolore nesciunt voluptatum aut error provident voluptatem sit. Accusantium dolorem fugiat blanditiis similique. Eveniet sit rerum nam fugit.\n\nQui quos odit possimus quo pariatur omnis. Occaecati placeat velit commodi eligendi nemo et. Officia quos vitae omnis provident."
+                      description: 'Necessitatibus sapiente porro quae omnis. Assumenda asperiores eaque aut qui rerum nobis. Quis et tenetur sit labore. Qui deserunt provident dolorem repudiandae nihil nostrum beatae. Impedit enim quibusdam qui sint nisi similique.'
+                      url: 'http://stokes.com/nemo-asperiores-aut-eum-voluptas-provident-et'
+                      image_url: 'https://via.placeholder.com/800x600.png/00ee66?text=articles+Faker+corrupti'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 12
+                      title: 'Nesciunt et at laboriosam.'
+                      slug: voluptas-illum-et-quo-sunt-omnis-veritatis
+                      source: 'Greenholt, Considine and Carroll'
+                      author: 'Evalyn Schuppe Sr.'
+                      category: eveniet
+                      content: "Ipsam amet ut nemo quam sit inventore. Fugiat sunt enim itaque dolore voluptatem. Dignissimos et rerum voluptate aut in exercitationem et. Qui ex repellat rerum rem sint rerum. Odio inventore non eos tempore.\n\nAutem optio architecto officiis sit porro veniam. Et dolorem perferendis dolore alias dolores. Quasi exercitationem et voluptatem recusandae nobis qui.\n\nTemporibus sint libero totam est quis tempore maxime. Enim aperiam rerum veniam quasi alias iste. Rerum facilis debitis voluptate facilis quo. Incidunt est omnis omnis ut minima.\n\nEt vitae ea et dignissimos neque molestias. Eum dolores molestiae vel omnis. Vel fuga iste eos dolorum eveniet quod. Fugit libero beatae impedit labore.\n\nLabore vitae sed harum unde culpa enim modi. Soluta minus adipisci doloribus expedita ut et nesciunt. Cumque molestias sequi saepe sed qui. Est est aut perspiciatis quo ex. Harum iusto aut unde."
+                      description: 'Et inventore dolorum quia cumque. Hic minus cum dolorem voluptatem est velit suscipit iure. Ea a vel et sit et temporibus explicabo corporis. Vel consequatur sed voluptatem et qui deleniti.'
+                      url: 'http://www.jast.info/'
+                      image_url: 'https://via.placeholder.com/800x600.png/00cc22?text=articles+Faker+accusantium'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 13
+                      title: 'Voluptatem ullam numquam qui ab accusantium nemo.'
+                      slug: distinctio-et-blanditiis-accusamus-aut
+                      source: 'Lang Group'
+                      author: 'Leif Bode'
+                      category: voluptatem
+                      content: "Aliquam et neque dolores quia. Soluta exercitationem culpa quia sed. Ut quam rem eum consectetur neque. Sed ea ut nihil omnis sed voluptatum distinctio commodi. Voluptate mollitia voluptatem voluptate qui minima.\n\nOccaecati veritatis ipsam quia necessitatibus et excepturi quaerat. Occaecati dignissimos velit iusto et accusantium rerum cupiditate.\n\nSint exercitationem consectetur et aut. Sunt quo totam et non. Reprehenderit sint non dolorem voluptas ex. Asperiores aut autem et.\n\nEt quisquam necessitatibus enim eum ab possimus. Architecto sunt corporis ut. Eos illum nihil sunt sed corrupti magni voluptate. Unde et fugit quidem.\n\nOfficia non nostrum rerum sunt officia. Sit maiores hic quo necessitatibus magnam. Iste non labore ratione inventore in est amet sint."
+                      description: 'Natus magnam odio rerum alias natus voluptatibus quis. Nihil expedita non architecto. Vel fugit vel dicta id.'
+                      url: 'http://dibbert.net/non-deleniti-quo-velit-non-ratione-doloribus-ducimus-velit'
+                      image_url: 'https://via.placeholder.com/800x600.png/006622?text=articles+Faker+ea'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 14
+                      title: 'Harum aut qui ea officia placeat sint deleniti.'
+                      slug: tempore-sed-eaque-natus-dolorem-iure-quo
+                      source: 'Brown, Buckridge and Bogisich'
+                      author: 'Loyal Stracke'
+                      category: alias
+                      content: "Ipsa ea enim nisi nesciunt repellat. Repellendus non possimus modi placeat commodi perspiciatis soluta. Omnis eius eos sed facilis.\n\nReprehenderit et veniam omnis ratione et. Quisquam voluptas sapiente autem dolorem ut rerum eaque. Et qui dolor repellendus earum ea nihil maxime. In est laborum magni ea est autem voluptates.\n\nBeatae et maxime voluptatem et accusantium a. Ut in rerum veritatis nihil. Quia ipsa tenetur ducimus iusto a ut explicabo.\n\nEt magnam ullam illo ducimus facilis hic. Eius quaerat reprehenderit alias. Qui repellat praesentium est. Consequuntur explicabo sint atque molestiae.\n\nDebitis dolorem illo delectus rerum. Et expedita laborum molestiae similique non qui. Et ut eos recusandae illo vel. Voluptatem necessitatibus nihil facilis vitae."
+                      description: 'Aliquam est reprehenderit nisi deleniti expedita facere. Aut optio mollitia illo itaque nihil aspernatur ut. Accusamus nam eveniet sint iusto sit.'
+                      url: 'http://armstrong.com/commodi-maiores-enim-sit-voluptas'
+                      image_url: 'https://via.placeholder.com/800x600.png/001144?text=articles+Faker+eveniet'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 15
+                      title: 'Cumque molestiae quia aperiam quia consequuntur enim.'
+                      slug: omnis-iusto-quis-iure-excepturi-et-impedit-ducimus
+                      source: "Connelly, O'Kon and Wiegand"
+                      author: 'Declan Koepp'
+                      category: cumque
+                      content: "Delectus dolores modi sint. A harum ea corporis rerum earum odio non consequatur. Sit blanditiis voluptatum quisquam expedita eos omnis.\n\nAdipisci et rerum distinctio dolorem qui sit. Numquam quia quasi temporibus soluta est sit. Rerum ut fuga reiciendis molestiae omnis minus explicabo.\n\nArchitecto non omnis expedita hic sint numquam nemo et. Sint ut omnis magni. Occaecati ducimus sit eveniet velit recusandae. Aut voluptates quaerat fugit voluptas.\n\nAdipisci tempora cupiditate voluptas architecto sed. Quia aut et eos et mollitia quisquam est. Ex eius et quam magnam illo.\n\nMollitia dolorum id qui illo laboriosam. Expedita ut aut officiis. Quis nulla ea molestiae corrupti. Maiores a nobis quis omnis dolores ea voluptatibus."
+                      description: 'Corporis consequatur libero quia. Ut amet dolores dicta quisquam.'
+                      url: 'http://miller.org/est-est-corrupti-ipsa-molestiae-aliquid-soluta-quod'
+                      image_url: 'https://via.placeholder.com/800x600.png/009911?text=articles+Faker+porro'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 16
+                      title: 'Voluptatem provident soluta soluta rem magnam temporibus corrupti.'
+                      slug: enim-nesciunt-autem-ex-et-tenetur-similique
+                      source: "O'Conner-Deckow"
+                      author: 'Prof. Felicia Bosco Sr.'
+                      category: sit
+                      content: "Eum est expedita provident. Illo dolores et nisi iure molestiae earum est. Occaecati rerum sit sed ullam cupiditate tempora. Quis quis voluptatem nam reiciendis.\n\nRepellat sint minus aut numquam voluptas. Repudiandae asperiores ut numquam qui earum non voluptate. Quis et quasi est quo culpa dolor.\n\nRerum voluptates pariatur praesentium sapiente atque. Non corrupti veritatis sapiente. Qui sint quia autem commodi quasi. Hic magni dolores impedit tenetur molestiae fuga velit ut.\n\nAut dolores ea ad laboriosam. Ipsa sint perferendis nobis architecto ullam praesentium est. Commodi doloremque sint sunt ipsum praesentium iusto consequuntur expedita. Et qui praesentium quis quaerat aut.\n\nQui ratione in tempore officiis amet quia vero. Ullam delectus sapiente placeat provident qui asperiores. Autem perspiciatis cupiditate velit occaecati voluptate nihil vel. Laborum aut corporis ducimus."
+                      description: 'Amet aperiam soluta animi officia nihil assumenda qui. Quia aut voluptatibus quam id exercitationem. Hic doloremque quaerat provident ut.'
+                      url: 'http://www.stracke.biz/commodi-et-fugit-minus-delectus-non'
+                      image_url: 'https://via.placeholder.com/800x600.png/008899?text=articles+Faker+incidunt'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 17
+                      title: 'Et quia hic nulla qui quibusdam odit laborum.'
+                      slug: autem-autem-ipsum-sed-porro
+                      source: 'Schimmel, Rowe and Hamill'
+                      author: 'Arvilla Cole'
+                      category: id
+                      content: "Laboriosam laboriosam et magnam. Labore molestias tempora possimus tempore sed sit. Rerum et sunt quas provident. Voluptas ut sint quia.\n\nPossimus fugit est qui omnis. Velit quam ipsam alias omnis ea nihil atque. Nesciunt amet consequatur corporis culpa eos.\n\nDoloremque vero aperiam ea dolorum. Dolorem suscipit quod voluptas dolore nostrum asperiores. Unde officiis dolor numquam nihil. Odit eos sed perferendis quo est.\n\nAssumenda perspiciatis qui repellat pariatur quae commodi quisquam. Numquam quaerat maxime inventore a officia. Velit saepe consequatur saepe repudiandae et.\n\nEt mollitia modi recusandae eius et ratione atque. Minus quo est in quas rerum dignissimos. Delectus molestiae rerum iure qui. Mollitia aut quo doloremque qui quibusdam. Natus quas esse exercitationem vel consectetur nesciunt voluptates assumenda."
+                      description: 'Omnis dolor ipsum voluptatum dolorem iste. Amet sunt ducimus voluptate nemo porro et veritatis in. Asperiores reprehenderit soluta autem cumque optio.'
+                      url: 'http://www.leannon.biz/minus-libero-fugit-consequatur-consectetur-nemo-magnam-et-rerum'
+                      image_url: 'https://via.placeholder.com/800x600.png/00cc66?text=articles+Faker+corporis'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 18
+                      title: 'Omnis rerum veritatis facere.'
+                      slug: dicta-est-hic-eius-consequatur
+                      source: Lakin-Murray
+                      author: 'Boris Crona MD'
+                      category: eos
+                      content: "Consequatur doloremque assumenda qui ad. Quo et voluptates ut. Natus deserunt ullam sit sapiente nam ut. Vero provident eveniet quam occaecati occaecati doloribus minus veritatis.\n\nCum ut ipsam qui dolorem laborum. Illo quas et aut aliquid exercitationem reiciendis voluptatem. Vel iusto explicabo voluptatem deserunt velit sunt eos. Corporis inventore minus deleniti quia natus esse omnis.\n\nItaque placeat tenetur quasi voluptate. Sit ut placeat quasi aliquid occaecati quia et aut. Nemo distinctio voluptatem et vel et. Consequuntur velit tenetur eaque non.\n\nEst tempora sit delectus a consequatur similique. Quo placeat exercitationem reprehenderit dolorem aut omnis voluptatibus. Velit sed sint rerum iure qui. Eaque deleniti quod porro officiis libero velit accusamus.\n\nRatione odio corporis nesciunt et quos. Ducimus deserunt autem non quas reiciendis mollitia qui. Neque accusamus repudiandae modi hic laborum a vero molestiae. Qui doloribus a ipsa quae consequatur vel impedit."
+                      description: 'Eligendi cupiditate est voluptatem eum voluptas. Eius et sequi repellendus eum nemo facilis cupiditate. Ut voluptates reprehenderit et suscipit molestiae tenetur. Eum qui voluptas quo quaerat.'
+                      url: 'http://www.kulas.biz/dolorem-aut-consequatur-maiores-ut-illum'
+                      image_url: 'https://via.placeholder.com/800x600.png/0000bb?text=articles+Faker+nihil'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 19
+                      title: 'Veritatis incidunt quia hic et asperiores beatae quis.'
+                      slug: eveniet-ut-alias-perspiciatis
+                      source: Hodkiewicz-Halvorson
+                      author: 'Ms. Josefa Powlowski V'
+                      category: animi
+                      content: "Ex aperiam illum qui dolor nihil placeat. Recusandae natus aut aut ab. A impedit iste rerum deserunt. Quam vel dicta accusamus molestias sit ea incidunt. Perspiciatis animi ipsam sunt quo adipisci ab officiis.\n\nFacilis voluptas voluptatum unde consequatur. Quia nesciunt consequatur sint cumque. Necessitatibus et deserunt atque voluptatem.\n\nBeatae velit dolorum nihil sit culpa ut enim. Dolorem ut autem consequuntur sunt voluptatem error dicta. Inventore temporibus quia odio deserunt perferendis.\n\nNemo magni corrupti reiciendis sed. Vero ut assumenda ullam modi dolor asperiores. Distinctio maxime numquam architecto labore. Et qui aperiam officia neque. Corrupti rerum illo harum sequi reprehenderit qui pariatur.\n\nMollitia et eius aliquam ad. Recusandae aspernatur sunt officiis delectus aperiam velit repellendus. Eum dolorem consequatur natus et et harum. Neque autem doloremque aut accusantium et."
+                      description: 'Molestias et adipisci harum nulla quo. Nemo architecto optio voluptas eaque maiores minima. Eveniet pariatur sint consectetur expedita natus tempora. Eum occaecati eveniet repudiandae at.'
+                      url: 'https://labadie.com/aut-repellendus-et-est-ipsum.html'
+                      image_url: 'https://via.placeholder.com/800x600.png/009977?text=articles+Faker+iste'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 20
+                      title: 'Velit provident labore aliquid alias itaque maiores ut.'
+                      slug: dolor-aut-modi-et-deserunt-quia-eius
+                      source: "Kuvalis, D'Amore and Langworth"
+                      author: 'Dr. Jaycee Muller'
+                      category: ipsum
+                      content: "Quibusdam sapiente qui excepturi iste pariatur. Suscipit quasi assumenda quia delectus. Ex ipsa magni omnis beatae sed amet ab iure.\n\nVoluptas animi alias enim nisi minus esse dolores. Pariatur mollitia aspernatur ut id mollitia provident. Officia dolorem ipsa doloribus recusandae omnis. Placeat repudiandae ut omnis.\n\nEius itaque incidunt debitis nihil animi. Exercitationem recusandae illum qui numquam. Quibusdam suscipit unde magni nam sed est. Est ut sed sunt quidem deleniti vero unde.\n\nVoluptatem ea sint enim doloribus quia asperiores porro. Nam vero consectetur voluptate. Accusantium beatae et consectetur odio tenetur optio est perferendis.\n\nNobis est accusamus qui cum a. Quaerat aspernatur reiciendis et sunt officia omnis. Suscipit sint id autem quis. Consequatur voluptas quia sunt dolorum libero vitae id."
+                      description: 'Eaque modi excepturi nostrum occaecati quibusdam est ipsam. Omnis et suscipit consequatur sit quia est dolor. Consequatur dolorem temporibus est omnis iure dolorem quia quos.'
+                      url: 'https://runolfsdottir.com/itaque-consequuntur-id-enim-et-beatae.html'
+                      image_url: 'https://via.placeholder.com/800x600.png/0022ff?text=articles+Faker+nemo'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 21
+                      title: 'Ea sed ex molestias ratione labore fugit.'
+                      slug: temporibus-voluptate-ut-nam-ut-ut-optio-fugiat-totam
+                      source: 'Hartmann and Sons'
+                      author: 'Euna Considine'
+                      category: cupiditate
+                      content: "Numquam eos repellendus officiis rerum. Quaerat eligendi aliquam nemo porro. Hic fuga blanditiis blanditiis iusto quibusdam non. Qui fugit qui non vero aliquid magni repellendus.\n\nQuasi aut et quia rem facilis. Repellat sit rerum non a nulla error ullam. Incidunt aut suscipit voluptatem a aut consequatur quas.\n\nCulpa est iusto natus eaque. Quasi quod voluptate voluptates consequatur.\n\nEt assumenda quae aliquid qui doloremque. Molestias voluptatibus consequatur dolor sed in quis unde. Officiis voluptas non omnis ducimus modi fugit. Dolor in officiis accusamus commodi eveniet et.\n\nModi et libero accusamus est in at voluptatem. Qui deserunt ratione eius non. Eos mollitia rerum aut a dolorem dolor commodi."
+                      description: 'Eum ratione quis ut fugiat quia temporibus ratione. Saepe ab incidunt qui velit velit omnis est. Tempora et et eligendi facere quas.'
+                      url: 'https://www.leuschke.info/beatae-eos-magnam-inventore'
+                      image_url: 'https://via.placeholder.com/800x600.png/008811?text=articles+Faker+dicta'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 22
+                      title: 'Voluptatum aut cum architecto veniam.'
+                      slug: alias-qui-omnis-corporis-laudantium-harum-quia
+                      source: 'Lindgren, Powlowski and Rau'
+                      author: 'Rowan Littel'
+                      category: at
+                      content: "Voluptas quis voluptates alias enim voluptatem. Distinctio commodi adipisci harum expedita. Illum qui neque labore voluptas. In facere aut tempore corporis.\n\nVoluptates eius eos vero aliquam repudiandae. Error beatae aut et.\n\nQuasi necessitatibus eum omnis cumque temporibus. Debitis voluptates corporis cumque dolorum reiciendis nesciunt nesciunt.\n\nQuis nisi assumenda recusandae ex sit vel. Et quia sit et non minima.\n\nEum quia velit deleniti rerum adipisci id odit esse. Dolores hic rerum quidem minus ex. Vitae officiis alias et amet eum a. Assumenda est numquam quibusdam eligendi excepturi ipsa atque."
+                      description: 'Totam omnis amet quam modi. Ex provident nam fugiat explicabo. Ipsam sunt magni itaque eum. Ut et vitae id perferendis.'
+                      url: 'http://skiles.com/'
+                      image_url: 'https://via.placeholder.com/800x600.png/001100?text=articles+Faker+qui'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 23
+                      title: 'Quos corrupti suscipit ad nihil.'
+                      slug: explicabo-tenetur-dignissimos-saepe-iure-quo
+                      source: 'Legros and Sons'
+                      author: 'Mr. Glennie Kutch'
+                      category: dolor
+                      content: "Maxime dolor magnam est voluptate modi molestiae. Non ut illo eos. Quam labore minus consequatur quia.\n\nVoluptas quod perspiciatis eos numquam porro et est dolorem. Exercitationem consectetur voluptatem maxime molestiae quo voluptatibus velit. Qui qui vel sint sit laudantium odit quia.\n\nConsequatur sit qui enim fuga eveniet consequatur sit. Doloribus quibusdam velit recusandae optio. Qui architecto et sunt et at magni.\n\nFugiat amet nemo sed porro. Blanditiis ipsam iure accusamus minus qui illo consectetur dicta. Quidem expedita vero dolores placeat dolorem. Autem qui ipsa iste est veniam est. Omnis harum soluta ab eaque totam fugit nihil.\n\nEt tenetur non et cumque est consequatur et. Commodi est architecto cum. Deleniti sed sed eos et et ab non."
+                      description: 'Est ea ut eos eos. Voluptas laudantium exercitationem est occaecati a quia debitis distinctio. Quo optio ad nostrum officiis. Dolores non autem dolorem quia ut.'
+                      url: 'http://kassulke.com/id-sunt-fugit-officiis-omnis-similique.html'
+                      image_url: 'https://via.placeholder.com/800x600.png/00aa77?text=articles+Faker+placeat'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 24
+                      title: 'Qui quo iusto repellat rerum officia voluptas reiciendis.'
+                      slug: inventore-ullam-provident-enim-facere-unde-quia
+                      source: 'Cummings Inc'
+                      author: 'Maurine Sporer'
+                      category: quibusdam
+                      content: "Sunt alias earum voluptate aut. Dolores necessitatibus et repellat laborum dolore. Officiis accusamus rerum repellendus deserunt sit quo maiores. Optio consequatur sit facilis dolore nihil.\n\nTempore voluptate amet dolores in consequatur et. Aut consequatur aliquam ex ut hic voluptates. Atque facere mollitia sit quisquam voluptates et. Aliquid et nemo ut. Praesentium soluta itaque expedita vel et.\n\nMolestiae sed a voluptate unde repellat. Et aut inventore magnam doloremque rerum accusamus. Totam nihil accusamus harum quia consequuntur qui.\n\nOfficia veritatis expedita veniam ut porro sint. Dolores enim nulla error voluptas qui necessitatibus et. Quaerat iure id dolorem sapiente cumque quo et dolore. Et quod architecto beatae accusantium et.\n\nQuisquam qui dolorem necessitatibus reiciendis qui exercitationem. Veniam iste sint autem a. Quis dolores architecto consequuntur consectetur ea excepturi non. Consequuntur suscipit sequi quod aut rem."
+                      description: 'Dicta autem exercitationem quo. Aliquam quis voluptatem voluptas minima sit. Nostrum id culpa quia eveniet provident aut. In veniam quidem incidunt odit saepe ea aut.'
+                      url: 'https://www.friesen.com/molestiae-illo-voluptatum-ab-maxime-quis-dolor'
+                      image_url: 'https://via.placeholder.com/800x600.png/00ccee?text=articles+Faker+corrupti'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 25
+                      title: 'Excepturi modi ducimus qui nobis est eum.'
+                      slug: laborum-autem-fugiat-a-iusto-modi-totam
+                      source: Cormier-Dare
+                      author: 'Hester Dicki'
+                      category: voluptatum
+                      content: "Sunt voluptas illo consequuntur quo. Debitis recusandae quam architecto corporis earum maiores. Tempora tenetur quia dolor quia natus.\n\nQuisquam enim omnis sint et. Et ipsum enim ad sit doloremque delectus. Adipisci quae iste perferendis impedit recusandae.\n\nDeleniti aliquam ut tempora placeat cupiditate. Beatae quae officiis in et recusandae qui voluptatem. Qui dolor aspernatur quidem sunt quo enim.\n\nHarum sunt eum odit totam eaque maiores et. At recusandae quo sit aut ut sit odio odit. Fugiat amet veniam iste officia. Minima nihil perferendis odit rerum sit et. Aut et voluptates sunt aperiam nemo quia.\n\nNumquam labore dolorem beatae totam rerum ut et. Qui et facere corporis qui ut. Repellendus facilis aliquam soluta nesciunt."
+                      description: 'Ut modi fuga quia officia sunt vitae non. Nemo aut voluptas rerum ut quia ut et. Omnis quas qui qui quam temporibus fugiat odit aut. Ratione eaque voluptas quia aliquam ipsam.'
+                      url: 'http://www.rutherford.com/expedita-est-molestiae-laboriosam-eius-quam-ratione.html'
+                      image_url: 'https://via.placeholder.com/800x600.png/0088ff?text=articles+Faker+id'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 26
+                      title: 'Atque quia voluptate facilis ut.'
+                      slug: quis-ipsam-mollitia-ut-quae
+                      source: 'Nader, Barton and Bayer'
+                      author: 'Beth Funk'
+                      category: ut
+                      content: "Qui magnam porro cupiditate at animi ipsum. Labore quia et libero. Est esse exercitationem beatae id qui repellendus incidunt aut. Qui beatae repudiandae aut tempore atque.\n\nLibero ratione quas est et sit qui labore. Est est eius illum consectetur nostrum minus voluptas. Maxime cumque incidunt error inventore voluptates facere. Aut rerum in molestias hic.\n\nAut dolores quo eveniet id sunt enim et. Architecto deleniti magni nobis ipsum sunt nihil. Enim laborum nihil est repellat ipsa deleniti.\n\nLaudantium esse aut atque aut perspiciatis omnis ab. Aut molestiae distinctio quia et quis qui. Soluta quisquam corporis qui impedit fugit.\n\nDolorem consequatur architecto rerum quae molestiae. Accusantium facere assumenda libero reprehenderit. Eum neque et quo magni eius odio. Nihil et veritatis ducimus aliquam vel quaerat. Assumenda officiis dignissimos temporibus id quidem."
+                      description: 'Officia quis odit amet voluptate illum vitae ut. Qui accusamus voluptatem iste labore. Facilis quia voluptatem libero delectus consequatur non.'
+                      url: 'http://www.lind.com/exercitationem-omnis-deserunt-dolorum-ipsa-quaerat-autem-amet'
+                      image_url: 'https://via.placeholder.com/800x600.png/0066ff?text=articles+Faker+blanditiis'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 27
+                      title: 'Voluptatibus sunt exercitationem voluptas veritatis harum rerum nesciunt.'
+                      slug: molestias-aut-accusantium-sed-maiores-quis-mollitia
+                      source: 'Rohan Inc'
+                      author: 'Mr. Rowland Kovacek I'
+                      category: consectetur
+                      content: "Molestias error dolorum voluptas dolor aut atque. Eum sit impedit beatae ut delectus magni cupiditate. Ipsa tempora voluptatem occaecati voluptatem vel dicta itaque sapiente. Necessitatibus sapiente perspiciatis reprehenderit eum aut neque.\n\nFugiat cupiditate consequatur est ab aliquam qui. Porro tempore natus vitae eveniet vel repellat harum corporis. Temporibus at qui quasi in.\n\nPossimus et impedit et iste. Eos eaque voluptas eos eveniet. Quis dolore sed omnis. Id assumenda adipisci est odio.\n\nIn ipsum eos perferendis quia incidunt aspernatur. Non laudantium voluptates aut ratione sed. Ratione incidunt accusantium iste modi.\n\nConsequatur beatae ducimus praesentium velit. Nemo corporis consequuntur minima hic qui. Aut aut eos libero id optio repudiandae temporibus ducimus. Similique sint occaecati aspernatur illum."
+                      description: 'Asperiores quae eum fuga perspiciatis eos qui iure enim. Sunt esse qui blanditiis possimus minima architecto. Et ut doloribus quia eaque. Reprehenderit aliquid placeat sint natus maiores ab aperiam. Quasi qui molestiae quisquam ex possimus iste quam.'
+                      url: 'http://crist.biz/sit-commodi-consectetur-placeat-et'
+                      image_url: 'https://via.placeholder.com/800x600.png/00bb99?text=articles+Faker+aut'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 28
+                      title: 'Culpa est ratione libero aut qui ea.'
+                      slug: placeat-est-est-asperiores-voluptates-aut
+                      source: 'Abbott Ltd'
+                      author: 'Augustus Schmidt'
+                      category: expedita
+                      content: "Hic laboriosam iste qui laboriosam modi dicta. Saepe ea reiciendis numquam debitis. Illo soluta quo officia fugiat est.\n\nEius eum consequatur numquam sunt iste et. In et eius et voluptas. At voluptatem ducimus libero dolor reprehenderit. Asperiores modi omnis molestias.\n\nUt harum magnam consectetur dignissimos laboriosam. Odio non dolor iusto sunt vero illo laborum. Quasi provident unde beatae laborum nesciunt deleniti perferendis.\n\nNeque placeat assumenda laborum enim. Ut itaque rem pariatur et. Praesentium aut illum vitae. Voluptatem deleniti molestiae atque nihil nam aut.\n\nPraesentium tempore amet officia nisi libero saepe alias. Et similique exercitationem aut rem at assumenda. Consequatur nesciunt praesentium quae."
+                      description: 'Ut neque tempora et corrupti a voluptatum ea. Dolorem voluptates sunt quae suscipit et. Nesciunt magnam tempora eos fuga molestias quis. Magnam unde facere aliquid non. Vel rerum similique quas suscipit amet molestiae.'
+                      url: 'http://emard.com/omnis-exercitationem-qui-ex-magnam-non.html'
+                      image_url: 'https://via.placeholder.com/800x600.png/0033cc?text=articles+Faker+incidunt'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 29
+                      title: 'Aliquid aut est blanditiis voluptatem.'
+                      slug: perferendis-laboriosam-et-nam-iste-sint-eligendi-sed
+                      source: 'Grant LLC'
+                      author: 'Heath Olson'
+                      category: saepe
+                      content: "Voluptatum eveniet qui voluptatem. Perferendis dolore odit nihil explicabo hic assumenda. Placeat nesciunt perferendis velit possimus. Illo repudiandae beatae a excepturi.\n\nDolores rerum excepturi et dolores eum minima. Ut commodi quos similique velit sapiente similique similique. Quo rerum voluptatem rerum laborum. Odit asperiores ea ipsum facilis est sint assumenda debitis.\n\nSequi voluptate temporibus molestiae vitae. Non tenetur recusandae accusamus architecto dolores illum. Explicabo ratione sint quis est.\n\nAlias quos eos nisi doloremque aperiam. Deleniti veniam totam voluptates placeat excepturi quisquam delectus. Tempore neque impedit maiores neque et libero omnis.\n\nEos aliquid molestiae qui totam pariatur. Distinctio dolorem sunt vero."
+                      description: 'Sit itaque sunt sint culpa iure nobis eum. Eos eum quam deserunt eaque esse. Rerum repellendus qui culpa sed. Consequatur ipsam occaecati consequatur est dolore accusantium. Ex eum dolorem quod facilis adipisci ut ad.'
+                      url: 'http://reynolds.com/optio-recusandae-unde-consequatur-quisquam-assumenda-vel-est'
+                      image_url: 'https://via.placeholder.com/800x600.png/00ffbb?text=articles+Faker+qui'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                    -
+                      id: 30
+                      title: 'Eum quaerat tempore illo consequatur quia officia illo.'
+                      slug: sit-atque-delectus-eum-at-optio-repellat
+                      source: Bartell-Shields
+                      author: 'Spencer Altenwerth'
+                      category: nihil
+                      content: "Maxime dignissimos sint ducimus omnis. Dolore rerum sint reprehenderit reprehenderit commodi quis qui. Id est voluptatem rerum enim qui.\n\nNam natus alias qui totam similique. Non ut et molestiae sit illo dolorem minima. Quasi deserunt velit harum dolor officia. Quod unde fuga necessitatibus et consectetur at.\n\nSaepe velit quis adipisci rerum et eum ut. Cumque illo et et necessitatibus. Ut illo voluptatum accusamus qui velit. Atque sit nobis nobis placeat sint et delectus eveniet.\n\nExpedita ipsa temporibus aliquid autem nihil aut aliquid. Est sint amet ipsa debitis. Harum adipisci soluta eum at sequi debitis et exercitationem.\n\nAccusantium maiores culpa corrupti sint totam. Voluptas facere minima aliquid velit qui consectetur. Et sit enim necessitatibus suscipit voluptas. Quidem enim culpa est voluptatum."
+                      description: 'Rem illo aliquid minus officiis nesciunt. Sed rerum sequi consectetur voluptatem placeat. Inventore est sed ipsam qui in laborum ipsum.'
+                      url: 'http://franecki.com/voluptatem-repellendus-recusandae-enim-dolorum-iure'
+                      image_url: 'https://via.placeholder.com/800x600.png/00ccee?text=articles+Faker+eligendi'
+                      created_at: '2024-11-15T17:28:09.000000Z'
+                      updated_at: '2024-11-15T17:28:09.000000Z'
+                  meta:
+                    total: 100
+                    next_page_url: 'http://innoscripta-news-aggregator.test/api/articles?page=2'
+                    per_page: 30
+                    current_page: 1
+                    last_page: 4
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Quia qui molestiae aliquam dolorum.'
+                        slug: quas-recusandae-soluta-inventore-ut-perspiciatis-doloribus
+                        source: 'Braun, Parker and Abbott'
+                        author: 'Gia Leannon'
+                        category: quo
+                        content: "Cupiditate similique non laborum ad. Et molestias doloribus et cumque officiis. Repellat porro et ut ratione consequatur tenetur nulla sed.\n\nEst excepturi unde voluptas minima iste modi. Et qui a aut est eos. Voluptatem eos id deserunt. Ut ipsum magnam sed fuga aspernatur consectetur qui. Modi consequatur ipsam aliquid nobis a sit necessitatibus.\n\nEarum voluptatem rem ipsum laudantium sed. Excepturi nostrum ut veniam debitis ut sit repellendus.\n\nSapiente sunt repudiandae in corporis. Aut itaque quae deserunt laboriosam voluptatem est. Totam nam sunt reprehenderit architecto saepe culpa sint.\n\nBeatae nihil minima ea voluptatem earum corporis vel. Sunt voluptas sapiente quasi ea et rerum magnam. Corporis corrupti labore numquam natus ut quidem et cum."
+                        description: 'Omnis ratione delectus magnam rerum sunt minus corporis. Sit et beatae ut. Repellat non tenetur quia modi. Rerum culpa quod qui facilis.'
+                        url: 'https://veum.com/nisi-temporibus-quam-delectus-dolorum-rem-rerum-cum.html'
+                        image_url: 'https://via.placeholder.com/800x600.png/001177?text=articles+Faker+similique'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 2
+                        title: 'Similique eos doloribus ab error quis amet quod aliquam.'
+                        slug: inventore-aut-ea-ducimus-esse-est
+                        source: 'Hirthe Ltd'
+                        author: 'Erick Hoeger'
+                        category: dolorum
+                        content: "Cupiditate magnam nesciunt eum soluta. Est quidem quis placeat qui. Sint dignissimos eos animi.\n\nSunt est distinctio accusantium doloremque provident optio. Sapiente quisquam dignissimos veritatis accusantium ipsum dolores. Aut sit est voluptatibus a ex consequatur. Qui laborum architecto explicabo aut commodi a.\n\nMolestiae ut odit fugiat nihil ut totam voluptatem. Asperiores quas aliquid ab minus. Facere voluptatem quia perferendis reiciendis aliquid fugit sit. Quam sed omnis minima iste. Perspiciatis cumque qui pariatur reiciendis facilis facilis.\n\nNostrum id quia doloremque. Rerum porro aut earum totam maiores quo sit qui. Eaque sit maiores nihil consequatur. Et in enim alias dolor ullam sint alias.\n\nBeatae soluta ea est. Officia cupiditate voluptatem voluptas sunt et. Distinctio corrupti ex rerum commodi aut."
+                        description: 'Perferendis debitis non error ut suscipit. Omnis pariatur qui dolor qui. Explicabo quo deleniti aut ipsa. Qui ut vitae reiciendis inventore sed non et.'
+                        url: 'http://boyer.com/'
+                        image_url: 'https://via.placeholder.com/800x600.png/005566?text=articles+Faker+aliquam'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 3
+                        title: 'Facere nemo beatae non temporibus rerum et molestias.'
+                        slug: error-quisquam-reprehenderit-ea-voluptatem-voluptas-quia-modi
+                        source: Gleason-Klein
+                        author: 'Dr. Macie Raynor V'
+                        category: soluta
+                        content: "Neque ipsa unde dolor doloribus. Possimus ut ea eius vel qui alias. Voluptatem dolorem sequi vel fugiat. Sint deserunt ipsa quas mollitia omnis.\n\nAutem et et libero. Ad in est cum earum quis aut animi omnis. Nemo expedita odio vel autem explicabo. Ad sed non similique pariatur rerum qui.\n\nLaboriosam provident quia pariatur voluptates est magni quasi. Eveniet non corrupti labore. Ipsum qui ut est consequuntur sed laudantium.\n\nPraesentium aliquid hic dolorem ab sit. Blanditiis autem et placeat eum. Ut deserunt ut consequuntur. Sed dolor distinctio distinctio. Autem sint consequatur sunt rem occaecati aliquid reprehenderit.\n\nIste in dolores deleniti. Doloribus illum non debitis ea. Non nisi veniam illo quia veniam excepturi."
+                        description: 'Aut officia earum et. Sint modi occaecati debitis omnis animi numquam tempore. Quis odit vero et perspiciatis eaque quia deserunt. Hic sint rerum ex consequatur quaerat.'
+                        url: 'http://www.mclaughlin.com/'
+                        image_url: 'https://via.placeholder.com/800x600.png/00ee00?text=articles+Faker+voluptatem'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 4
+                        title: 'Quis harum nam enim qui laboriosam sapiente.'
+                        slug: corrupti-pariatur-porro-error-occaecati-esse
+                        source: Bartoletti-Heathcote
+                        author: 'Deron Bahringer'
+                        category: doloremque
+                        content: "Repellendus omnis quo nihil non atque sit omnis. Sed reiciendis facere nisi aut possimus. Earum nobis ut animi culpa labore reprehenderit corporis.\n\nTemporibus deleniti unde omnis magni sint sit. At quis quo ducimus et accusantium eaque id et. Voluptatem molestiae laudantium ut ad eum. Possimus enim consequatur est quos repellat aut. Aliquid ipsa qui eius et labore.\n\nVoluptatem nemo aspernatur tenetur voluptas. Temporibus voluptas incidunt vitae.\n\nIpsam itaque ut eos at quia temporibus ullam. Aut suscipit laborum atque fuga quia. Eius quaerat fuga ipsa. Reiciendis cumque facere nihil at adipisci eligendi perspiciatis tempore.\n\nAut nihil quod aperiam voluptatem. Voluptas aperiam in itaque. Unde quidem non eos qui facilis iste quam. Est quia sunt explicabo."
+                        description: 'Et ex eaque sunt dolor dolor rerum itaque. Quos quam praesentium amet labore ipsum. Quibusdam rem est nisi molestiae enim. Soluta et doloribus est velit culpa.'
+                        url: 'http://www.deckow.com/'
+                        image_url: 'https://via.placeholder.com/800x600.png/00aaff?text=articles+Faker+optio'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 5
+                        title: 'Vero qui esse et velit consequatur saepe nesciunt.'
+                        slug: ipsam-quod-id-corrupti-et
+                        source: 'Funk, Roberts and Auer'
+                        author: 'Prof. Gaston Kessler'
+                        category: doloribus
+                        content: "Quam veritatis ducimus aut sed doloremque inventore. Ipsum quis necessitatibus earum rem sequi sit eius. Voluptate eum sunt sit qui consectetur ea beatae. Enim rem dignissimos impedit id unde id in a.\n\nDolore consequatur earum corrupti ut totam. Reprehenderit dolore enim quam aliquid et sint laborum. Deserunt nihil sequi est rerum qui.\n\nEt est error consequatur quod sed repellendus omnis. Cum nam repudiandae commodi perferendis. Ullam et aut quia molestiae rerum blanditiis voluptatem quis. Voluptatum suscipit voluptatem esse a.\n\nDeleniti delectus doloribus provident distinctio. Enim pariatur ea aut cumque dolor excepturi. Nihil et blanditiis tempora et iste corporis. Harum nemo adipisci temporibus nesciunt.\n\nDoloribus voluptates vel quia et quasi. Expedita corporis nesciunt itaque est voluptates ratione. Tenetur eaque id consequuntur ratione est blanditiis ab."
+                        description: 'Deserunt aut totam dolorum ipsum. Perferendis et officia commodi accusamus aut officia. Cum quia dolorum aut rerum beatae saepe quos consequuntur. Dolores eos sequi eligendi enim.'
+                        url: 'http://muller.com/fugit-itaque-qui-incidunt-cum-est-necessitatibus-soluta'
+                        image_url: 'https://via.placeholder.com/800x600.png/0044cc?text=articles+Faker+minus'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 6
+                        title: 'Ut voluptas commodi aut voluptates velit tempora assumenda.'
+                        slug: rem-hic-architecto-est-minima-quos
+                        source: Cummings-Ruecker
+                        author: 'Damon Ledner'
+                        category: velit
+                        content: "Et ipsam at nostrum ad quasi voluptatum. Voluptatibus eaque alias illum reprehenderit qui. Officiis et magni iste. Qui quisquam animi impedit et.\n\nRepellat suscipit minus earum iure dolore. Numquam hic aut atque deleniti voluptatibus aspernatur voluptas. In ex voluptatem rerum a dolorum dolorem. Harum doloremque consectetur iure et placeat.\n\nNihil distinctio accusamus est saepe consequatur nostrum et. Ea consequatur enim architecto culpa in est. Quia quod fuga eveniet voluptatem quod rem pariatur nihil.\n\nFuga unde fugiat quasi necessitatibus. Sit veniam enim nemo ab quia. Eveniet sapiente repellendus sit cum qui. Aliquid sed voluptatem sunt et ullam.\n\nAccusantium consequatur quasi quae. Et ratione consequatur error error sunt."
+                        description: 'Aperiam et sit eius tempora. Qui totam hic aspernatur quaerat vel.'
+                        url: 'http://www.mann.com/blanditiis-est-et-ut-quaerat.html'
+                        image_url: 'https://via.placeholder.com/800x600.png/004400?text=articles+Faker+omnis'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 7
+                        title: 'Molestiae ipsam expedita excepturi laudantium accusamus voluptatum.'
+                        slug: sint-sed-incidunt-esse-repellat-ipsam-culpa
+                        source: "O'Keefe Ltd"
+                        author: 'Dr. Myah Dietrich Sr.'
+                        category: minus
+                        content: "Quo adipisci reiciendis consectetur non consequatur dolorem ut commodi. Et repellat vel inventore. Et ad nesciunt veniam repudiandae consequatur quos magnam. Dolor repudiandae et soluta consectetur quo.\n\nDolorem impedit aut id ipsa. Sit nobis illum ducimus sunt atque et sunt. Dolorem est in aut tempora debitis voluptas.\n\nEligendi quasi ratione impedit assumenda error. Doloribus ea eligendi sequi.\n\nDeserunt minus mollitia impedit distinctio vel voluptatem. Accusantium sunt nihil eum. Vero sequi similique corrupti esse iste deleniti. Asperiores excepturi voluptates magnam corrupti. Ducimus quia qui et minima inventore quam quaerat.\n\nFacilis nobis aut doloremque deserunt. Rerum quis corrupti ut eaque aliquam velit. Deleniti itaque nisi nobis nulla possimus enim quo voluptatem. Commodi quis ea ut."
+                        description: 'Aut sit esse quia commodi enim. Alias corrupti hic delectus mollitia dolores veritatis quisquam. Esse et delectus id esse itaque eos beatae.'
+                        url: 'http://www.treutel.com/excepturi-modi-libero-eligendi-eaque-laudantium-qui'
+                        image_url: 'https://via.placeholder.com/800x600.png/00ff11?text=articles+Faker+neque'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 8
+                        title: 'Odio eum nemo asperiores a id quos.'
+                        slug: ad-veritatis-eius-velit-autem
+                        source: Yundt-Mueller
+                        author: 'Tamara Robel I'
+                        category: et
+                        content: "Quia sint dolores atque quisquam accusantium sed illo et. Dolores ea non voluptatem quas. Magnam quidem distinctio fugit voluptate expedita dolor magnam quo.\n\nOfficiis voluptate quod consectetur qui. Placeat minus quis doloremque inventore quidem recusandae minus. Expedita excepturi nisi ea ea ullam modi aut sit. Doloribus voluptate officia quod.\n\nAdipisci ipsam laborum expedita necessitatibus ratione. Alias illo quae dolores consequatur fugiat. Et omnis nostrum et vel.\n\nEt et voluptatem aut minus sit facilis. Quod ut eum molestias omnis laudantium ex aut iure. Eos qui necessitatibus aut sit provident dolor voluptatem.\n\nAut rerum voluptatibus sunt animi voluptatum dolorem recusandae. Quaerat porro sit quae dolores et. Quis velit quam alias qui accusamus nemo et sed."
+                        description: 'Nemo blanditiis eos voluptatem non consequatur ut sapiente porro. Perferendis id sed aut reprehenderit voluptas alias eos distinctio. Et unde voluptatibus ratione quam quibusdam sint ratione.'
+                        url: 'http://herman.info/ea-ut-esse-ipsam-laborum-rem-vero-dolorem-et.html'
+                        image_url: 'https://via.placeholder.com/800x600.png/009988?text=articles+Faker+corrupti'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 9
+                        title: 'Mollitia voluptas veniam ad.'
+                        slug: quia-molestiae-illo-iste-exercitationem-voluptatem-dolor-incidunt
+                        source: White-Pacocha
+                        author: 'Mr. Joey Kunde'
+                        category: deleniti
+                        content: "Qui laborum ab voluptatibus dolores labore nihil explicabo. Delectus quisquam qui ratione et architecto dolores quod. Ut quasi aperiam accusamus pariatur qui omnis.\n\nPlaceat quisquam magni et dolorem impedit sit et. Repellat rerum et enim vero sint quia. Voluptates et sint dolores itaque et aut qui quaerat.\n\nTempore omnis molestiae rerum. Aut est minima perspiciatis excepturi. Labore ex facilis eaque ea eum quis. Qui sed commodi aut est aperiam.\n\nConsequuntur accusamus consequuntur qui placeat corporis deserunt. Aspernatur dicta debitis quia ducimus consequatur. Ut libero et in at eum. Non rem maxime culpa non dicta beatae.\n\nNesciunt eligendi quis eum laborum labore nam. Odit nisi nam dignissimos. Possimus praesentium sit veritatis ut incidunt."
+                        description: 'Consectetur qui nam eos facere maxime et omnis. Laborum quo ratione voluptatem est vero esse beatae. Rem voluptatem fugit laboriosam ut ut omnis suscipit.'
+                        url: 'http://www.hammes.biz/'
+                        image_url: 'https://via.placeholder.com/800x600.png/004499?text=articles+Faker+excepturi'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 10
+                        title: 'Nobis quas sunt non aliquam error eaque.'
+                        slug: est-ab-aperiam-dolorem-reiciendis-aut-cumque
+                        source: 'Effertz, Collins and Orn'
+                        author: 'Stephon Turcotte III'
+                        category: sapiente
+                        content: "Soluta tempore dolorem dicta. Et est sit neque accusantium. Et sint quae dolores laudantium. Similique officiis quo nihil ab amet et est. Dolor ipsam aut distinctio est ab itaque.\n\nNobis nostrum tempora inventore dolore rem. Qui commodi perspiciatis voluptatem molestiae deserunt harum quas. Quos doloremque sit placeat libero. Dolor ut est voluptas consequatur eos.\n\nSed nemo voluptatem magnam maxime. Odit dolorem dolorem tempore totam ut. Rem quis reprehenderit recusandae eos. Harum placeat voluptas ea a.\n\nQuis aut quo fugit nostrum repudiandae. Delectus sit reiciendis aut harum esse voluptas laboriosam officia. Quo qui omnis ab eligendi est minima. Omnis rerum vel quidem neque.\n\nAspernatur quae voluptatem magnam ut vel. Est assumenda nobis ducimus aut ut sunt mollitia laborum. Velit omnis et accusantium sint explicabo eos et. Molestias dolores explicabo eos voluptatum. Accusamus corrupti ut facilis placeat inventore inventore aut."
+                        description: 'Autem aut dolores enim hic. Ex nulla eum eius sunt hic est et reprehenderit. Quia commodi odit eum sint id. Ut nostrum quia pariatur aut.'
+                        url: 'http://www.streich.com/'
+                        image_url: 'https://via.placeholder.com/800x600.png/00cccc?text=articles+Faker+omnis'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 11
+                        title: 'Cumque qui consequatur similique vero.'
+                        slug: maxime-omnis-ab-voluptate-dicta
+                        source: 'Grady, Spencer and Nikolaus'
+                        author: 'Miss Hilda Schumm'
+                        category: quasi
+                        content: "Voluptatum exercitationem aut sint voluptas. Labore hic fuga enim odio dolor id. Aperiam sunt ea alias quia.\n\nPerferendis soluta sapiente non quam nesciunt consequatur. Minus officiis quaerat maiores.\n\nCommodi minima et facilis velit sequi. Architecto iusto accusantium eos aut. Ullam itaque est aperiam molestiae.\n\nPerspiciatis dolore nesciunt voluptatum aut error provident voluptatem sit. Accusantium dolorem fugiat blanditiis similique. Eveniet sit rerum nam fugit.\n\nQui quos odit possimus quo pariatur omnis. Occaecati placeat velit commodi eligendi nemo et. Officia quos vitae omnis provident."
+                        description: 'Necessitatibus sapiente porro quae omnis. Assumenda asperiores eaque aut qui rerum nobis. Quis et tenetur sit labore. Qui deserunt provident dolorem repudiandae nihil nostrum beatae. Impedit enim quibusdam qui sint nisi similique.'
+                        url: 'http://stokes.com/nemo-asperiores-aut-eum-voluptas-provident-et'
+                        image_url: 'https://via.placeholder.com/800x600.png/00ee66?text=articles+Faker+corrupti'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 12
+                        title: 'Nesciunt et at laboriosam.'
+                        slug: voluptas-illum-et-quo-sunt-omnis-veritatis
+                        source: 'Greenholt, Considine and Carroll'
+                        author: 'Evalyn Schuppe Sr.'
+                        category: eveniet
+                        content: "Ipsam amet ut nemo quam sit inventore. Fugiat sunt enim itaque dolore voluptatem. Dignissimos et rerum voluptate aut in exercitationem et. Qui ex repellat rerum rem sint rerum. Odio inventore non eos tempore.\n\nAutem optio architecto officiis sit porro veniam. Et dolorem perferendis dolore alias dolores. Quasi exercitationem et voluptatem recusandae nobis qui.\n\nTemporibus sint libero totam est quis tempore maxime. Enim aperiam rerum veniam quasi alias iste. Rerum facilis debitis voluptate facilis quo. Incidunt est omnis omnis ut minima.\n\nEt vitae ea et dignissimos neque molestias. Eum dolores molestiae vel omnis. Vel fuga iste eos dolorum eveniet quod. Fugit libero beatae impedit labore.\n\nLabore vitae sed harum unde culpa enim modi. Soluta minus adipisci doloribus expedita ut et nesciunt. Cumque molestias sequi saepe sed qui. Est est aut perspiciatis quo ex. Harum iusto aut unde."
+                        description: 'Et inventore dolorum quia cumque. Hic minus cum dolorem voluptatem est velit suscipit iure. Ea a vel et sit et temporibus explicabo corporis. Vel consequatur sed voluptatem et qui deleniti.'
+                        url: 'http://www.jast.info/'
+                        image_url: 'https://via.placeholder.com/800x600.png/00cc22?text=articles+Faker+accusantium'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 13
+                        title: 'Voluptatem ullam numquam qui ab accusantium nemo.'
+                        slug: distinctio-et-blanditiis-accusamus-aut
+                        source: 'Lang Group'
+                        author: 'Leif Bode'
+                        category: voluptatem
+                        content: "Aliquam et neque dolores quia. Soluta exercitationem culpa quia sed. Ut quam rem eum consectetur neque. Sed ea ut nihil omnis sed voluptatum distinctio commodi. Voluptate mollitia voluptatem voluptate qui minima.\n\nOccaecati veritatis ipsam quia necessitatibus et excepturi quaerat. Occaecati dignissimos velit iusto et accusantium rerum cupiditate.\n\nSint exercitationem consectetur et aut. Sunt quo totam et non. Reprehenderit sint non dolorem voluptas ex. Asperiores aut autem et.\n\nEt quisquam necessitatibus enim eum ab possimus. Architecto sunt corporis ut. Eos illum nihil sunt sed corrupti magni voluptate. Unde et fugit quidem.\n\nOfficia non nostrum rerum sunt officia. Sit maiores hic quo necessitatibus magnam. Iste non labore ratione inventore in est amet sint."
+                        description: 'Natus magnam odio rerum alias natus voluptatibus quis. Nihil expedita non architecto. Vel fugit vel dicta id.'
+                        url: 'http://dibbert.net/non-deleniti-quo-velit-non-ratione-doloribus-ducimus-velit'
+                        image_url: 'https://via.placeholder.com/800x600.png/006622?text=articles+Faker+ea'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 14
+                        title: 'Harum aut qui ea officia placeat sint deleniti.'
+                        slug: tempore-sed-eaque-natus-dolorem-iure-quo
+                        source: 'Brown, Buckridge and Bogisich'
+                        author: 'Loyal Stracke'
+                        category: alias
+                        content: "Ipsa ea enim nisi nesciunt repellat. Repellendus non possimus modi placeat commodi perspiciatis soluta. Omnis eius eos sed facilis.\n\nReprehenderit et veniam omnis ratione et. Quisquam voluptas sapiente autem dolorem ut rerum eaque. Et qui dolor repellendus earum ea nihil maxime. In est laborum magni ea est autem voluptates.\n\nBeatae et maxime voluptatem et accusantium a. Ut in rerum veritatis nihil. Quia ipsa tenetur ducimus iusto a ut explicabo.\n\nEt magnam ullam illo ducimus facilis hic. Eius quaerat reprehenderit alias. Qui repellat praesentium est. Consequuntur explicabo sint atque molestiae.\n\nDebitis dolorem illo delectus rerum. Et expedita laborum molestiae similique non qui. Et ut eos recusandae illo vel. Voluptatem necessitatibus nihil facilis vitae."
+                        description: 'Aliquam est reprehenderit nisi deleniti expedita facere. Aut optio mollitia illo itaque nihil aspernatur ut. Accusamus nam eveniet sint iusto sit.'
+                        url: 'http://armstrong.com/commodi-maiores-enim-sit-voluptas'
+                        image_url: 'https://via.placeholder.com/800x600.png/001144?text=articles+Faker+eveniet'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 15
+                        title: 'Cumque molestiae quia aperiam quia consequuntur enim.'
+                        slug: omnis-iusto-quis-iure-excepturi-et-impedit-ducimus
+                        source: "Connelly, O'Kon and Wiegand"
+                        author: 'Declan Koepp'
+                        category: cumque
+                        content: "Delectus dolores modi sint. A harum ea corporis rerum earum odio non consequatur. Sit blanditiis voluptatum quisquam expedita eos omnis.\n\nAdipisci et rerum distinctio dolorem qui sit. Numquam quia quasi temporibus soluta est sit. Rerum ut fuga reiciendis molestiae omnis minus explicabo.\n\nArchitecto non omnis expedita hic sint numquam nemo et. Sint ut omnis magni. Occaecati ducimus sit eveniet velit recusandae. Aut voluptates quaerat fugit voluptas.\n\nAdipisci tempora cupiditate voluptas architecto sed. Quia aut et eos et mollitia quisquam est. Ex eius et quam magnam illo.\n\nMollitia dolorum id qui illo laboriosam. Expedita ut aut officiis. Quis nulla ea molestiae corrupti. Maiores a nobis quis omnis dolores ea voluptatibus."
+                        description: 'Corporis consequatur libero quia. Ut amet dolores dicta quisquam.'
+                        url: 'http://miller.org/est-est-corrupti-ipsa-molestiae-aliquid-soluta-quod'
+                        image_url: 'https://via.placeholder.com/800x600.png/009911?text=articles+Faker+porro'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 16
+                        title: 'Voluptatem provident soluta soluta rem magnam temporibus corrupti.'
+                        slug: enim-nesciunt-autem-ex-et-tenetur-similique
+                        source: "O'Conner-Deckow"
+                        author: 'Prof. Felicia Bosco Sr.'
+                        category: sit
+                        content: "Eum est expedita provident. Illo dolores et nisi iure molestiae earum est. Occaecati rerum sit sed ullam cupiditate tempora. Quis quis voluptatem nam reiciendis.\n\nRepellat sint minus aut numquam voluptas. Repudiandae asperiores ut numquam qui earum non voluptate. Quis et quasi est quo culpa dolor.\n\nRerum voluptates pariatur praesentium sapiente atque. Non corrupti veritatis sapiente. Qui sint quia autem commodi quasi. Hic magni dolores impedit tenetur molestiae fuga velit ut.\n\nAut dolores ea ad laboriosam. Ipsa sint perferendis nobis architecto ullam praesentium est. Commodi doloremque sint sunt ipsum praesentium iusto consequuntur expedita. Et qui praesentium quis quaerat aut.\n\nQui ratione in tempore officiis amet quia vero. Ullam delectus sapiente placeat provident qui asperiores. Autem perspiciatis cupiditate velit occaecati voluptate nihil vel. Laborum aut corporis ducimus."
+                        description: 'Amet aperiam soluta animi officia nihil assumenda qui. Quia aut voluptatibus quam id exercitationem. Hic doloremque quaerat provident ut.'
+                        url: 'http://www.stracke.biz/commodi-et-fugit-minus-delectus-non'
+                        image_url: 'https://via.placeholder.com/800x600.png/008899?text=articles+Faker+incidunt'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 17
+                        title: 'Et quia hic nulla qui quibusdam odit laborum.'
+                        slug: autem-autem-ipsum-sed-porro
+                        source: 'Schimmel, Rowe and Hamill'
+                        author: 'Arvilla Cole'
+                        category: id
+                        content: "Laboriosam laboriosam et magnam. Labore molestias tempora possimus tempore sed sit. Rerum et sunt quas provident. Voluptas ut sint quia.\n\nPossimus fugit est qui omnis. Velit quam ipsam alias omnis ea nihil atque. Nesciunt amet consequatur corporis culpa eos.\n\nDoloremque vero aperiam ea dolorum. Dolorem suscipit quod voluptas dolore nostrum asperiores. Unde officiis dolor numquam nihil. Odit eos sed perferendis quo est.\n\nAssumenda perspiciatis qui repellat pariatur quae commodi quisquam. Numquam quaerat maxime inventore a officia. Velit saepe consequatur saepe repudiandae et.\n\nEt mollitia modi recusandae eius et ratione atque. Minus quo est in quas rerum dignissimos. Delectus molestiae rerum iure qui. Mollitia aut quo doloremque qui quibusdam. Natus quas esse exercitationem vel consectetur nesciunt voluptates assumenda."
+                        description: 'Omnis dolor ipsum voluptatum dolorem iste. Amet sunt ducimus voluptate nemo porro et veritatis in. Asperiores reprehenderit soluta autem cumque optio.'
+                        url: 'http://www.leannon.biz/minus-libero-fugit-consequatur-consectetur-nemo-magnam-et-rerum'
+                        image_url: 'https://via.placeholder.com/800x600.png/00cc66?text=articles+Faker+corporis'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 18
+                        title: 'Omnis rerum veritatis facere.'
+                        slug: dicta-est-hic-eius-consequatur
+                        source: Lakin-Murray
+                        author: 'Boris Crona MD'
+                        category: eos
+                        content: "Consequatur doloremque assumenda qui ad. Quo et voluptates ut. Natus deserunt ullam sit sapiente nam ut. Vero provident eveniet quam occaecati occaecati doloribus minus veritatis.\n\nCum ut ipsam qui dolorem laborum. Illo quas et aut aliquid exercitationem reiciendis voluptatem. Vel iusto explicabo voluptatem deserunt velit sunt eos. Corporis inventore minus deleniti quia natus esse omnis.\n\nItaque placeat tenetur quasi voluptate. Sit ut placeat quasi aliquid occaecati quia et aut. Nemo distinctio voluptatem et vel et. Consequuntur velit tenetur eaque non.\n\nEst tempora sit delectus a consequatur similique. Quo placeat exercitationem reprehenderit dolorem aut omnis voluptatibus. Velit sed sint rerum iure qui. Eaque deleniti quod porro officiis libero velit accusamus.\n\nRatione odio corporis nesciunt et quos. Ducimus deserunt autem non quas reiciendis mollitia qui. Neque accusamus repudiandae modi hic laborum a vero molestiae. Qui doloribus a ipsa quae consequatur vel impedit."
+                        description: 'Eligendi cupiditate est voluptatem eum voluptas. Eius et sequi repellendus eum nemo facilis cupiditate. Ut voluptates reprehenderit et suscipit molestiae tenetur. Eum qui voluptas quo quaerat.'
+                        url: 'http://www.kulas.biz/dolorem-aut-consequatur-maiores-ut-illum'
+                        image_url: 'https://via.placeholder.com/800x600.png/0000bb?text=articles+Faker+nihil'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 19
+                        title: 'Veritatis incidunt quia hic et asperiores beatae quis.'
+                        slug: eveniet-ut-alias-perspiciatis
+                        source: Hodkiewicz-Halvorson
+                        author: 'Ms. Josefa Powlowski V'
+                        category: animi
+                        content: "Ex aperiam illum qui dolor nihil placeat. Recusandae natus aut aut ab. A impedit iste rerum deserunt. Quam vel dicta accusamus molestias sit ea incidunt. Perspiciatis animi ipsam sunt quo adipisci ab officiis.\n\nFacilis voluptas voluptatum unde consequatur. Quia nesciunt consequatur sint cumque. Necessitatibus et deserunt atque voluptatem.\n\nBeatae velit dolorum nihil sit culpa ut enim. Dolorem ut autem consequuntur sunt voluptatem error dicta. Inventore temporibus quia odio deserunt perferendis.\n\nNemo magni corrupti reiciendis sed. Vero ut assumenda ullam modi dolor asperiores. Distinctio maxime numquam architecto labore. Et qui aperiam officia neque. Corrupti rerum illo harum sequi reprehenderit qui pariatur.\n\nMollitia et eius aliquam ad. Recusandae aspernatur sunt officiis delectus aperiam velit repellendus. Eum dolorem consequatur natus et et harum. Neque autem doloremque aut accusantium et."
+                        description: 'Molestias et adipisci harum nulla quo. Nemo architecto optio voluptas eaque maiores minima. Eveniet pariatur sint consectetur expedita natus tempora. Eum occaecati eveniet repudiandae at.'
+                        url: 'https://labadie.com/aut-repellendus-et-est-ipsum.html'
+                        image_url: 'https://via.placeholder.com/800x600.png/009977?text=articles+Faker+iste'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 20
+                        title: 'Velit provident labore aliquid alias itaque maiores ut.'
+                        slug: dolor-aut-modi-et-deserunt-quia-eius
+                        source: "Kuvalis, D'Amore and Langworth"
+                        author: 'Dr. Jaycee Muller'
+                        category: ipsum
+                        content: "Quibusdam sapiente qui excepturi iste pariatur. Suscipit quasi assumenda quia delectus. Ex ipsa magni omnis beatae sed amet ab iure.\n\nVoluptas animi alias enim nisi minus esse dolores. Pariatur mollitia aspernatur ut id mollitia provident. Officia dolorem ipsa doloribus recusandae omnis. Placeat repudiandae ut omnis.\n\nEius itaque incidunt debitis nihil animi. Exercitationem recusandae illum qui numquam. Quibusdam suscipit unde magni nam sed est. Est ut sed sunt quidem deleniti vero unde.\n\nVoluptatem ea sint enim doloribus quia asperiores porro. Nam vero consectetur voluptate. Accusantium beatae et consectetur odio tenetur optio est perferendis.\n\nNobis est accusamus qui cum a. Quaerat aspernatur reiciendis et sunt officia omnis. Suscipit sint id autem quis. Consequatur voluptas quia sunt dolorum libero vitae id."
+                        description: 'Eaque modi excepturi nostrum occaecati quibusdam est ipsam. Omnis et suscipit consequatur sit quia est dolor. Consequatur dolorem temporibus est omnis iure dolorem quia quos.'
+                        url: 'https://runolfsdottir.com/itaque-consequuntur-id-enim-et-beatae.html'
+                        image_url: 'https://via.placeholder.com/800x600.png/0022ff?text=articles+Faker+nemo'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 21
+                        title: 'Ea sed ex molestias ratione labore fugit.'
+                        slug: temporibus-voluptate-ut-nam-ut-ut-optio-fugiat-totam
+                        source: 'Hartmann and Sons'
+                        author: 'Euna Considine'
+                        category: cupiditate
+                        content: "Numquam eos repellendus officiis rerum. Quaerat eligendi aliquam nemo porro. Hic fuga blanditiis blanditiis iusto quibusdam non. Qui fugit qui non vero aliquid magni repellendus.\n\nQuasi aut et quia rem facilis. Repellat sit rerum non a nulla error ullam. Incidunt aut suscipit voluptatem a aut consequatur quas.\n\nCulpa est iusto natus eaque. Quasi quod voluptate voluptates consequatur.\n\nEt assumenda quae aliquid qui doloremque. Molestias voluptatibus consequatur dolor sed in quis unde. Officiis voluptas non omnis ducimus modi fugit. Dolor in officiis accusamus commodi eveniet et.\n\nModi et libero accusamus est in at voluptatem. Qui deserunt ratione eius non. Eos mollitia rerum aut a dolorem dolor commodi."
+                        description: 'Eum ratione quis ut fugiat quia temporibus ratione. Saepe ab incidunt qui velit velit omnis est. Tempora et et eligendi facere quas.'
+                        url: 'https://www.leuschke.info/beatae-eos-magnam-inventore'
+                        image_url: 'https://via.placeholder.com/800x600.png/008811?text=articles+Faker+dicta'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 22
+                        title: 'Voluptatum aut cum architecto veniam.'
+                        slug: alias-qui-omnis-corporis-laudantium-harum-quia
+                        source: 'Lindgren, Powlowski and Rau'
+                        author: 'Rowan Littel'
+                        category: at
+                        content: "Voluptas quis voluptates alias enim voluptatem. Distinctio commodi adipisci harum expedita. Illum qui neque labore voluptas. In facere aut tempore corporis.\n\nVoluptates eius eos vero aliquam repudiandae. Error beatae aut et.\n\nQuasi necessitatibus eum omnis cumque temporibus. Debitis voluptates corporis cumque dolorum reiciendis nesciunt nesciunt.\n\nQuis nisi assumenda recusandae ex sit vel. Et quia sit et non minima.\n\nEum quia velit deleniti rerum adipisci id odit esse. Dolores hic rerum quidem minus ex. Vitae officiis alias et amet eum a. Assumenda est numquam quibusdam eligendi excepturi ipsa atque."
+                        description: 'Totam omnis amet quam modi. Ex provident nam fugiat explicabo. Ipsam sunt magni itaque eum. Ut et vitae id perferendis.'
+                        url: 'http://skiles.com/'
+                        image_url: 'https://via.placeholder.com/800x600.png/001100?text=articles+Faker+qui'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 23
+                        title: 'Quos corrupti suscipit ad nihil.'
+                        slug: explicabo-tenetur-dignissimos-saepe-iure-quo
+                        source: 'Legros and Sons'
+                        author: 'Mr. Glennie Kutch'
+                        category: dolor
+                        content: "Maxime dolor magnam est voluptate modi molestiae. Non ut illo eos. Quam labore minus consequatur quia.\n\nVoluptas quod perspiciatis eos numquam porro et est dolorem. Exercitationem consectetur voluptatem maxime molestiae quo voluptatibus velit. Qui qui vel sint sit laudantium odit quia.\n\nConsequatur sit qui enim fuga eveniet consequatur sit. Doloribus quibusdam velit recusandae optio. Qui architecto et sunt et at magni.\n\nFugiat amet nemo sed porro. Blanditiis ipsam iure accusamus minus qui illo consectetur dicta. Quidem expedita vero dolores placeat dolorem. Autem qui ipsa iste est veniam est. Omnis harum soluta ab eaque totam fugit nihil.\n\nEt tenetur non et cumque est consequatur et. Commodi est architecto cum. Deleniti sed sed eos et et ab non."
+                        description: 'Est ea ut eos eos. Voluptas laudantium exercitationem est occaecati a quia debitis distinctio. Quo optio ad nostrum officiis. Dolores non autem dolorem quia ut.'
+                        url: 'http://kassulke.com/id-sunt-fugit-officiis-omnis-similique.html'
+                        image_url: 'https://via.placeholder.com/800x600.png/00aa77?text=articles+Faker+placeat'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 24
+                        title: 'Qui quo iusto repellat rerum officia voluptas reiciendis.'
+                        slug: inventore-ullam-provident-enim-facere-unde-quia
+                        source: 'Cummings Inc'
+                        author: 'Maurine Sporer'
+                        category: quibusdam
+                        content: "Sunt alias earum voluptate aut. Dolores necessitatibus et repellat laborum dolore. Officiis accusamus rerum repellendus deserunt sit quo maiores. Optio consequatur sit facilis dolore nihil.\n\nTempore voluptate amet dolores in consequatur et. Aut consequatur aliquam ex ut hic voluptates. Atque facere mollitia sit quisquam voluptates et. Aliquid et nemo ut. Praesentium soluta itaque expedita vel et.\n\nMolestiae sed a voluptate unde repellat. Et aut inventore magnam doloremque rerum accusamus. Totam nihil accusamus harum quia consequuntur qui.\n\nOfficia veritatis expedita veniam ut porro sint. Dolores enim nulla error voluptas qui necessitatibus et. Quaerat iure id dolorem sapiente cumque quo et dolore. Et quod architecto beatae accusantium et.\n\nQuisquam qui dolorem necessitatibus reiciendis qui exercitationem. Veniam iste sint autem a. Quis dolores architecto consequuntur consectetur ea excepturi non. Consequuntur suscipit sequi quod aut rem."
+                        description: 'Dicta autem exercitationem quo. Aliquam quis voluptatem voluptas minima sit. Nostrum id culpa quia eveniet provident aut. In veniam quidem incidunt odit saepe ea aut.'
+                        url: 'https://www.friesen.com/molestiae-illo-voluptatum-ab-maxime-quis-dolor'
+                        image_url: 'https://via.placeholder.com/800x600.png/00ccee?text=articles+Faker+corrupti'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 25
+                        title: 'Excepturi modi ducimus qui nobis est eum.'
+                        slug: laborum-autem-fugiat-a-iusto-modi-totam
+                        source: Cormier-Dare
+                        author: 'Hester Dicki'
+                        category: voluptatum
+                        content: "Sunt voluptas illo consequuntur quo. Debitis recusandae quam architecto corporis earum maiores. Tempora tenetur quia dolor quia natus.\n\nQuisquam enim omnis sint et. Et ipsum enim ad sit doloremque delectus. Adipisci quae iste perferendis impedit recusandae.\n\nDeleniti aliquam ut tempora placeat cupiditate. Beatae quae officiis in et recusandae qui voluptatem. Qui dolor aspernatur quidem sunt quo enim.\n\nHarum sunt eum odit totam eaque maiores et. At recusandae quo sit aut ut sit odio odit. Fugiat amet veniam iste officia. Minima nihil perferendis odit rerum sit et. Aut et voluptates sunt aperiam nemo quia.\n\nNumquam labore dolorem beatae totam rerum ut et. Qui et facere corporis qui ut. Repellendus facilis aliquam soluta nesciunt."
+                        description: 'Ut modi fuga quia officia sunt vitae non. Nemo aut voluptas rerum ut quia ut et. Omnis quas qui qui quam temporibus fugiat odit aut. Ratione eaque voluptas quia aliquam ipsam.'
+                        url: 'http://www.rutherford.com/expedita-est-molestiae-laboriosam-eius-quam-ratione.html'
+                        image_url: 'https://via.placeholder.com/800x600.png/0088ff?text=articles+Faker+id'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 26
+                        title: 'Atque quia voluptate facilis ut.'
+                        slug: quis-ipsam-mollitia-ut-quae
+                        source: 'Nader, Barton and Bayer'
+                        author: 'Beth Funk'
+                        category: ut
+                        content: "Qui magnam porro cupiditate at animi ipsum. Labore quia et libero. Est esse exercitationem beatae id qui repellendus incidunt aut. Qui beatae repudiandae aut tempore atque.\n\nLibero ratione quas est et sit qui labore. Est est eius illum consectetur nostrum minus voluptas. Maxime cumque incidunt error inventore voluptates facere. Aut rerum in molestias hic.\n\nAut dolores quo eveniet id sunt enim et. Architecto deleniti magni nobis ipsum sunt nihil. Enim laborum nihil est repellat ipsa deleniti.\n\nLaudantium esse aut atque aut perspiciatis omnis ab. Aut molestiae distinctio quia et quis qui. Soluta quisquam corporis qui impedit fugit.\n\nDolorem consequatur architecto rerum quae molestiae. Accusantium facere assumenda libero reprehenderit. Eum neque et quo magni eius odio. Nihil et veritatis ducimus aliquam vel quaerat. Assumenda officiis dignissimos temporibus id quidem."
+                        description: 'Officia quis odit amet voluptate illum vitae ut. Qui accusamus voluptatem iste labore. Facilis quia voluptatem libero delectus consequatur non.'
+                        url: 'http://www.lind.com/exercitationem-omnis-deserunt-dolorum-ipsa-quaerat-autem-amet'
+                        image_url: 'https://via.placeholder.com/800x600.png/0066ff?text=articles+Faker+blanditiis'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 27
+                        title: 'Voluptatibus sunt exercitationem voluptas veritatis harum rerum nesciunt.'
+                        slug: molestias-aut-accusantium-sed-maiores-quis-mollitia
+                        source: 'Rohan Inc'
+                        author: 'Mr. Rowland Kovacek I'
+                        category: consectetur
+                        content: "Molestias error dolorum voluptas dolor aut atque. Eum sit impedit beatae ut delectus magni cupiditate. Ipsa tempora voluptatem occaecati voluptatem vel dicta itaque sapiente. Necessitatibus sapiente perspiciatis reprehenderit eum aut neque.\n\nFugiat cupiditate consequatur est ab aliquam qui. Porro tempore natus vitae eveniet vel repellat harum corporis. Temporibus at qui quasi in.\n\nPossimus et impedit et iste. Eos eaque voluptas eos eveniet. Quis dolore sed omnis. Id assumenda adipisci est odio.\n\nIn ipsum eos perferendis quia incidunt aspernatur. Non laudantium voluptates aut ratione sed. Ratione incidunt accusantium iste modi.\n\nConsequatur beatae ducimus praesentium velit. Nemo corporis consequuntur minima hic qui. Aut aut eos libero id optio repudiandae temporibus ducimus. Similique sint occaecati aspernatur illum."
+                        description: 'Asperiores quae eum fuga perspiciatis eos qui iure enim. Sunt esse qui blanditiis possimus minima architecto. Et ut doloribus quia eaque. Reprehenderit aliquid placeat sint natus maiores ab aperiam. Quasi qui molestiae quisquam ex possimus iste quam.'
+                        url: 'http://crist.biz/sit-commodi-consectetur-placeat-et'
+                        image_url: 'https://via.placeholder.com/800x600.png/00bb99?text=articles+Faker+aut'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 28
+                        title: 'Culpa est ratione libero aut qui ea.'
+                        slug: placeat-est-est-asperiores-voluptates-aut
+                        source: 'Abbott Ltd'
+                        author: 'Augustus Schmidt'
+                        category: expedita
+                        content: "Hic laboriosam iste qui laboriosam modi dicta. Saepe ea reiciendis numquam debitis. Illo soluta quo officia fugiat est.\n\nEius eum consequatur numquam sunt iste et. In et eius et voluptas. At voluptatem ducimus libero dolor reprehenderit. Asperiores modi omnis molestias.\n\nUt harum magnam consectetur dignissimos laboriosam. Odio non dolor iusto sunt vero illo laborum. Quasi provident unde beatae laborum nesciunt deleniti perferendis.\n\nNeque placeat assumenda laborum enim. Ut itaque rem pariatur et. Praesentium aut illum vitae. Voluptatem deleniti molestiae atque nihil nam aut.\n\nPraesentium tempore amet officia nisi libero saepe alias. Et similique exercitationem aut rem at assumenda. Consequatur nesciunt praesentium quae."
+                        description: 'Ut neque tempora et corrupti a voluptatum ea. Dolorem voluptates sunt quae suscipit et. Nesciunt magnam tempora eos fuga molestias quis. Magnam unde facere aliquid non. Vel rerum similique quas suscipit amet molestiae.'
+                        url: 'http://emard.com/omnis-exercitationem-qui-ex-magnam-non.html'
+                        image_url: 'https://via.placeholder.com/800x600.png/0033cc?text=articles+Faker+incidunt'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 29
+                        title: 'Aliquid aut est blanditiis voluptatem.'
+                        slug: perferendis-laboriosam-et-nam-iste-sint-eligendi-sed
+                        source: 'Grant LLC'
+                        author: 'Heath Olson'
+                        category: saepe
+                        content: "Voluptatum eveniet qui voluptatem. Perferendis dolore odit nihil explicabo hic assumenda. Placeat nesciunt perferendis velit possimus. Illo repudiandae beatae a excepturi.\n\nDolores rerum excepturi et dolores eum minima. Ut commodi quos similique velit sapiente similique similique. Quo rerum voluptatem rerum laborum. Odit asperiores ea ipsum facilis est sint assumenda debitis.\n\nSequi voluptate temporibus molestiae vitae. Non tenetur recusandae accusamus architecto dolores illum. Explicabo ratione sint quis est.\n\nAlias quos eos nisi doloremque aperiam. Deleniti veniam totam voluptates placeat excepturi quisquam delectus. Tempore neque impedit maiores neque et libero omnis.\n\nEos aliquid molestiae qui totam pariatur. Distinctio dolorem sunt vero."
+                        description: 'Sit itaque sunt sint culpa iure nobis eum. Eos eum quam deserunt eaque esse. Rerum repellendus qui culpa sed. Consequatur ipsam occaecati consequatur est dolore accusantium. Ex eum dolorem quod facilis adipisci ut ad.'
+                        url: 'http://reynolds.com/optio-recusandae-unde-consequatur-quisquam-assumenda-vel-est'
+                        image_url: 'https://via.placeholder.com/800x600.png/00ffbb?text=articles+Faker+qui'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                      -
+                        id: 30
+                        title: 'Eum quaerat tempore illo consequatur quia officia illo.'
+                        slug: sit-atque-delectus-eum-at-optio-repellat
+                        source: Bartell-Shields
+                        author: 'Spencer Altenwerth'
+                        category: nihil
+                        content: "Maxime dignissimos sint ducimus omnis. Dolore rerum sint reprehenderit reprehenderit commodi quis qui. Id est voluptatem rerum enim qui.\n\nNam natus alias qui totam similique. Non ut et molestiae sit illo dolorem minima. Quasi deserunt velit harum dolor officia. Quod unde fuga necessitatibus et consectetur at.\n\nSaepe velit quis adipisci rerum et eum ut. Cumque illo et et necessitatibus. Ut illo voluptatum accusamus qui velit. Atque sit nobis nobis placeat sint et delectus eveniet.\n\nExpedita ipsa temporibus aliquid autem nihil aut aliquid. Est sint amet ipsa debitis. Harum adipisci soluta eum at sequi debitis et exercitationem.\n\nAccusantium maiores culpa corrupti sint totam. Voluptas facere minima aliquid velit qui consectetur. Et sit enim necessitatibus suscipit voluptas. Quidem enim culpa est voluptatum."
+                        description: 'Rem illo aliquid minus officiis nesciunt. Sed rerum sequi consectetur voluptatem placeat. Inventore est sed ipsam qui in laborum ipsum.'
+                        url: 'http://franecki.com/voluptatem-repellendus-recusandae-enim-dolorum-iure'
+                        image_url: 'https://via.placeholder.com/800x600.png/00ccee?text=articles+Faker+eligendi'
+                        created_at: '2024-11-15T17:28:09.000000Z'
+                        updated_at: '2024-11-15T17:28:09.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        title:
+                          type: string
+                          example: 'Quia qui molestiae aliquam dolorum.'
+                        slug:
+                          type: string
+                          example: quas-recusandae-soluta-inventore-ut-perspiciatis-doloribus
+                        source:
+                          type: string
+                          example: 'Braun, Parker and Abbott'
+                        author:
+                          type: string
+                          example: 'Gia Leannon'
+                        category:
+                          type: string
+                          example: quo
+                        content:
+                          type: string
+                          example: "Cupiditate similique non laborum ad. Et molestias doloribus et cumque officiis. Repellat porro et ut ratione consequatur tenetur nulla sed.\n\nEst excepturi unde voluptas minima iste modi. Et qui a aut est eos. Voluptatem eos id deserunt. Ut ipsum magnam sed fuga aspernatur consectetur qui. Modi consequatur ipsam aliquid nobis a sit necessitatibus.\n\nEarum voluptatem rem ipsum laudantium sed. Excepturi nostrum ut veniam debitis ut sit repellendus.\n\nSapiente sunt repudiandae in corporis. Aut itaque quae deserunt laboriosam voluptatem est. Totam nam sunt reprehenderit architecto saepe culpa sint.\n\nBeatae nihil minima ea voluptatem earum corporis vel. Sunt voluptas sapiente quasi ea et rerum magnam. Corporis corrupti labore numquam natus ut quidem et cum."
+                        description:
+                          type: string
+                          example: 'Omnis ratione delectus magnam rerum sunt minus corporis. Sit et beatae ut. Repellat non tenetur quia modi. Rerum culpa quod qui facilis.'
+                        url:
+                          type: string
+                          example: 'https://veum.com/nisi-temporibus-quam-delectus-dolorum-rem-rerum-cum.html'
+                        image_url:
+                          type: string
+                          example: 'https://via.placeholder.com/800x600.png/001177?text=articles+Faker+similique'
+                        created_at:
+                          type: string
+                          example: '2024-11-15T17:28:09.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-11-15T17:28:09.000000Z'
+                  meta:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                        example: 100
+                      next_page_url:
+                        type: string
+                        example: 'http://innoscripta-news-aggregator.test/api/articles?page=2'
+                      per_page:
+                        type: integer
+                        example: 30
+                      current_page:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 4
+      tags:
+        - Article
+      security: []
+  '/api/articles/{article_slug}':
+    get:
+      summary: 'Get Single Article'
+      operationId: getSingleArticle
+      description: ''
+      parameters: []
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Article not found'
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Article not found'
+      tags:
+        - Article
+      security: []
+    parameters:
+      -
+        in: path
+        name: article_slug
+        description: 'The slug of the article.'
+        example: demo-title
+        required: true
+        schema:
+          type: string
+  /api/register:
+    post:
+      summary: Registration
+      operationId: registration
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Insert name'
+                  example: 'John Doe'
+                  nullable: false
+                email:
+                  type: string
+                  description: 'Insert email'
+                  example: test@example.com
+                  nullable: false
+                password:
+                  type: string
+                  description: 'Insert password'
+                  example: password
+                  nullable: false
+                password_confirmation:
+                  type: string
+                  description: 'Insert password confirmation'
+                  example: password
+                  nullable: false
+              required:
+                - name
+                - email
+                - password
+                - password_confirmation
+      security: []
+  /api/login:
+    post:
+      summary: Login
+      operationId: login
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Insert email'
+                  example: test@example.com
+                  nullable: false
+                password:
+                  type: string
+                  description: 'Insert password'
+                  example: password
+                  nullable: false
+              required:
+                - email
+                - password
+      security: []
+  /api/password/email:
+    post:
+      summary: 'Send Password Reset Link'
+      operationId: sendPasswordResetLink
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Insert email'
+                  example: test@example.com
+                  nullable: false
+              required:
+                - email
+      security: []
+  /api/password/reset:
+    post:
+      summary: 'Reset Password'
+      operationId: resetPassword
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Insert email'
+                  example: test@example.com
+                  nullable: false
+                password:
+                  type: string
+                  description: 'Insert password'
+                  example: password
+                  nullable: false
+                password_confirmation:
+                  type: string
+                  description: 'Insert password confirmation'
+                  example: password
+                  nullable: false
+              required:
+                - email
+                - password
+                - password_confirmation
+      security: []
+  /api/logout:
+    post:
+      summary: Logout
+      operationId: logout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/preferences:
+    get:
+      summary: 'Get Preferences'
+      operationId: getPreferences
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Preference
+  /api/preferences/create:
+    post:
+      summary: 'Create Preference'
+      operationId: createPreference
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Preference
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                source:
+                  type: string
+                  description: 'Insert source'
+                  example: BBC
+                  nullable: false
+                category:
+                  type: string
+                  description: 'Insert category'
+                  example: tech
+                  nullable: false
+                author:
+                  type: string
+                  description: 'Insert author'
+                  example: 'Mr. X'
+                  nullable: false
+              required:
+                - source
+                - category
+                - author
+  '/api/preferences/{preference_id}':
+    get:
+      summary: 'Get Single Preference'
+      operationId: getSinglePreference
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Preference
+    delete:
+      summary: 'Destroy Preference'
+      operationId: destroyPreference
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Preference
+    parameters:
+      -
+        in: path
+        name: preference_id
+        description: 'The ID of the preference.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/preferences/{preference_id}/update':
+    put:
+      summary: 'Update Preference'
+      operationId: updatePreference
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Preference
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                source:
+                  type: string
+                  description: 'Insert source'
+                  example: BBC
+                  nullable: false
+                category:
+                  type: string
+                  description: 'Insert category'
+                  example: tech
+                  nullable: false
+                author:
+                  type: string
+                  description: 'Insert author'
+                  example: 'Mr. X'
+                  nullable: false
+              required:
+                - source
+                - category
+                - author
+    parameters:
+      -
+        in: path
+        name: preference_id
+        description: 'The ID of the preference.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Article
+    description: "\nAPIs for getting articles"
+  -
+    name: Authentication
+    description: "\nAPIs for managing authentication"
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: Preference
+    description: "\nAPIs for managing preferences"
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []

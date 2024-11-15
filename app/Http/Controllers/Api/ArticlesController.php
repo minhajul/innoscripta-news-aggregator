@@ -9,12 +9,25 @@ use App\Filters\Articles\BySource;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ArticleResource;
 use App\Models\Article;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Pipeline;
 
+/**
+ * @group Article
+ *
+ * APIs for getting articles
+ */
 class ArticlesController extends Controller
 {
+    /**
+     * Get Articles
+     *
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
     public function index(Request $request)
     {
         $pipelines = [
@@ -42,6 +55,13 @@ class ArticlesController extends Controller
         ], $articles->count() ? Response::HTTP_OK : Response::HTTP_NOT_FOUND);
     }
 
+    /**
+     * Get Single Article
+     *
+     * @urlParam article_slug string required The slug of the article. Example: demo-title
+     *
+     * @return JsonResponse
+     */
     public function show(Article $article)
     {
         return response()->json([

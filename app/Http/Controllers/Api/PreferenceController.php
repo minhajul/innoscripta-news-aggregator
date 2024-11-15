@@ -6,11 +6,25 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PreferenceRequest;
 use App\Http\Resources\PreferenceResource;
 use App\Models\Preference;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
+/**
+ * @group Preference
+ *
+ * APIs for managing preferences
+ */
 class PreferenceController extends Controller
 {
+    /**
+     * Get Preferences
+     *
+     * @param Request $request
+     *
+     * @authenticated
+     * @return JsonResponse
+     */
     public function index(Request $request)
     {
         $preferences = $request->user()->preferences;
@@ -21,6 +35,17 @@ class PreferenceController extends Controller
         ], $preferences->count() ? Response::HTTP_OK : Response::HTTP_NOT_FOUND);
     }
 
+    /**
+     * Create Preference
+     *
+     * @param PreferenceRequest $request
+     * @bodyParam source string required Insert source Example: BBC
+     * @bodyParam category string required Insert category Example: tech
+     * @bodyParam author string required Insert author Example: Mr. X
+     *
+     * @authenticated
+     * @return JsonResponse
+     */
     public function store(PreferenceRequest $request)
     {
         $preference = $request->user()
@@ -35,6 +60,14 @@ class PreferenceController extends Controller
         ]);
     }
 
+    /**
+     * Get Single Preference
+     *
+     * @param Preference $preference
+     *
+     * @authenticated
+     * @return JsonResponse
+     */
     public function show(Preference $preference)
     {
         return response()->json([
@@ -43,6 +76,19 @@ class PreferenceController extends Controller
         ]);
     }
 
+    /**
+     * Update Preference
+     *
+     * @param PreferenceRequest $request
+     * @param Preference $preference
+     *
+     * @bodyParam source string required Insert source Example: BBC
+     * @bodyParam category string required Insert category Example: tech
+     * @bodyParam author string required Insert author Example: Mr. X
+     *
+     * @authenticated
+     * @return JsonResponse
+     */
     public function update(PreferenceRequest $request, Preference $preference)
     {
         $preference = tap($preference)
@@ -54,6 +100,14 @@ class PreferenceController extends Controller
         ]);
     }
 
+    /**
+     * Destroy Preference
+     *
+     * @param Preference $preference
+     *
+     * @authenticated
+     * @return JsonResponse
+     */
     public function destroy(Preference $preference)
     {
         $preference->delete();

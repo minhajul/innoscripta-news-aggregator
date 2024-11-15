@@ -10,8 +10,21 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Password;
 
+/**
+ * @group Authentication
+ *
+ * APIs for managing authentication
+ */
 class PasswordResetController extends Controller
 {
+    /**
+     * Send Password Reset Link
+     *
+     * @param Request $request
+     * @bodyParam email string required Insert email Example: test@example.com
+     *
+     * @return JsonResponse
+     */
     public function sendResetLink(Request $request): JsonResponse
     {
         $request->validate(['email' => 'required|email']);
@@ -36,6 +49,16 @@ class PasswordResetController extends Controller
             : response()->json(['message' => __($status)], Response::HTTP_BAD_REQUEST);
     }
 
+    /**
+     * Reset Password
+     *
+     * @param Request $request
+     * @bodyParam email string required Insert email Example: test@example.com
+     * @bodyParam password string required Insert password Example: password
+     * @bodyParam password_confirmation string required Insert password confirmation Example: password
+     *
+     * @return JsonResponse
+     */
     public function resetPassword(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
