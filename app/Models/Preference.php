@@ -21,9 +21,9 @@ class Preference extends Model
     ];
 
     // Scopes
-    public function scopePopular(Builder $query, User $user): void
+    public function scopeOfUser(Builder $query): void
     {
-        $query->where('user_id', $user->id);
+        $query->where('user_id', auth()->id());
     }
 
     // Relationship

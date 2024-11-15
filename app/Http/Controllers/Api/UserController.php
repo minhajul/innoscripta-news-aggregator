@@ -7,11 +7,25 @@ use App\Http\Resources\ArticleResource;
 use App\Http\Resources\UserResource;
 use App\Models\Article;
 use App\Models\Preference;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
+/**
+ * @group User
+ *
+ * APIs for managing user
+ */
 class UserController extends Controller
 {
+    /**
+     * User Profile
+     *
+     * @param Request $request
+     *
+     * @authenticated
+     * @return JsonResponse
+     */
     public function __invoke(Request $request)
     {
         return response()->json([
@@ -21,12 +35,18 @@ class UserController extends Controller
         ]);
     }
 
+    /**
+     * Preferred Articles for User
+     *
+     * @param Request $request
+     *
+     * @authenticated
+     * @return JsonResponse
+     */
     public function getArticlesByPreferences(Request $request)
     {
-        $user = $request->user();
-
         $preferences = Preference::query()
-            ->ofUser($user)
+            ->ofUser()
             ->get();
 
         if ($preferences->isEmpty()) {

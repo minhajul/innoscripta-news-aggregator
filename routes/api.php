@@ -18,7 +18,7 @@ Route::post('/password/reset', [PasswordResetController::class, 'resetPassword']
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post('/logout', [LoginController::class, 'logout']);
 
-    Route::get('/user', [UserController::class]);
+    Route::get('/user', UserController::class);
     Route::get('/user/preferred/articles', [UserController::class, 'getArticlesByPreferences']);
 
     Route::get('/preferences', [PreferenceController::class, 'index']);

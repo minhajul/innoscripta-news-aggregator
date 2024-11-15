@@ -8,6 +8,7 @@ use App\Http\Resources\PreferenceResource;
 use App\Models\Preference;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 /**
  * @group Preference
