@@ -17,6 +17,7 @@ use Illuminate\Support\Str;
  *
  * APIs for managing authentication
  */
+
 class LoginController extends Controller
 {
     /**
