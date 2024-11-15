@@ -40,10 +40,7 @@ class PasswordResetController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'email' => ['required', 'email'],
-            'password' => [
-                'required',
-                'confirmed'
-            ],
+            'password' => ['required', 'confirmed']
         ]);
 
         if ($validator->fails()) {
@@ -52,6 +49,7 @@ class PasswordResetController extends Controller
                 'data' => $validator->errors(),
             ], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
+
         $user = User::query()
             ->where('email', $request->input('email'))
             ->first();
