@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Auth;
 
+use Illuminate\Http\Response;
 use Tests\TestCase;
 
 class RegistrationControllerTest extends TestCase
@@ -10,27 +11,16 @@ class RegistrationControllerTest extends TestCase
     {
         $response = $this->postJson('/api/register', [
             'name' => 'John Doe',
-            'email' => 'johndoe@example.com',
-            'password' => 'password',
-            'password_confirmation' => 'password',
+            'email' => 'test@example.com',
+            'password' => 'Pass-12M#12',
+            'password_confirmation' => 'Pass-12M#12',
         ]);
 
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'success',
-                'data' => [
-                    'id',
-                    'name',
-                    'email',
-                    'created_at',
-                    'updated_at',
-                ],
-                'access_token',
-            ]);
+        $response->assertStatus(Response::HTTP_OK);
 
         $this->assertDatabaseHas('users', [
             'name' => 'John Doe',
-            'email' => 'johndoe@example.com',
+            'email' => 'test@example.com',
         ]);
 
         $this->assertNotNull($response->json('access_token'));

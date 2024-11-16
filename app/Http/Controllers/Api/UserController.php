@@ -21,7 +21,6 @@ class UserController extends Controller
     /**
      * User Profile
      *
-     *
      * @authenticated
      *
      * @return JsonResponse

@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\Article;
+use Illuminate\Http\Response;
 use Tests\TestCase;
 
 class ArticlesControllerTest extends TestCase
@@ -13,7 +14,7 @@ class ArticlesControllerTest extends TestCase
 
         $response = $this->getJson('/api/articles');
 
-        $response->assertStatus(200);
+        $response->assertStatus(Response::HTTP_OK);
 
         $this->assertCount(30, $response->json('data'));
         $this->assertEquals($articles->count(), $response->json('meta.total'));
@@ -23,7 +24,7 @@ class ArticlesControllerTest extends TestCase
     {
         $response = $this->getJson('/api/articles/test');
 
-        $response->assertStatus(404);
+        $response->assertStatus(Response::HTTP_NOT_FOUND);
     }
 
     public function test_show_returns_single_article()
@@ -32,13 +33,13 @@ class ArticlesControllerTest extends TestCase
 
         $response = $this->getJson("/api/articles/$article->slug");
 
-        $response->assertStatus(200);
+        $response->assertStatus(Response::HTTP_OK);
     }
 
     public function test_show_returns_404_for_nonexistent_article()
     {
         $response = $this->getJson('/api/articles/no-article');
 
-        $response->assertStatus(404);
+        $response->assertStatus(Response::HTTP_NOT_FOUND);
     }
 }

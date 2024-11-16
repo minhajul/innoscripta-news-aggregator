@@ -14,7 +14,7 @@ class PreferenceControllerTest extends TestCase
     {
         parent::setUp();
 
-        $this->user = User::factory()->create();
+        $this->user = $this->getUser();
     }
 
     public function test_index_returns_user_preferences()
@@ -23,7 +23,8 @@ class PreferenceControllerTest extends TestCase
             'user_id' => $this->user->id,
         ]);
 
-        $response = $this->actingAs($this->user)->getJson('api/preferences');
+        $response = $this->actingAs($this->user)
+            ->getJson('api/preferences');
 
         $response->assertStatus(200);
 
@@ -32,7 +33,8 @@ class PreferenceControllerTest extends TestCase
 
     public function test_index_returns_404_when_user_has_no_preferences()
     {
-        $response = $this->actingAs($this->user)->getJson('api/preferences');
+        $response = $this->actingAs($this->user)
+            ->getJson('api/preferences');
 
         $response->assertStatus(404);
     }
@@ -45,7 +47,8 @@ class PreferenceControllerTest extends TestCase
             'author' => 'John Doe',
         ];
 
-        $response = $this->actingAs($this->user)->postJson('api/preferences/create', $data);
+        $response = $this->actingAs($this->user)
+            ->postJson('api/preferences/create', $data);
 
         $response->assertStatus(200)
             ->assertJson([

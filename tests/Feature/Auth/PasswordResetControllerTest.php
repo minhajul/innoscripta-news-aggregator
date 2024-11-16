@@ -3,6 +3,7 @@
 namespace Tests\Feature\Auth;
 
 use App\Models\User;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Password;
 use Tests\TestCase;
 
@@ -23,7 +24,7 @@ class PasswordResetControllerTest extends TestCase
             'email' => $user->email,
         ]);
 
-        $response->assertStatus(200)
+        $response->assertStatus(Response::HTTP_OK)
             ->assertJson(['message' => __('passwords.sent')]);
     }
 
@@ -33,10 +34,11 @@ class PasswordResetControllerTest extends TestCase
             'email' => 'nonexistent@example.com',
         ]);
 
-        $response->assertStatus(404)
+        $response->assertStatus(Response::HTTP_NOT_FOUND)
             ->assertJson([
                 'success' => false,
-                'data' => 'We can not find any account with this email',
+                'message' => 'We can not find any account with this email',
+                'data' => null
             ]);
     }
 
@@ -46,7 +48,7 @@ class PasswordResetControllerTest extends TestCase
             'email' => 'not-an-email',
         ]);
 
-        $response->assertStatus(422)
+        $response->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY)
             ->assertJsonValidationErrors(['email']);
     }
 
@@ -65,7 +67,7 @@ class PasswordResetControllerTest extends TestCase
             'token' => 'valid-token',
         ]);
 
-        $response->assertStatus(200)
+        $response->assertStatus(Response::HTTP_OK)
             ->assertJson(['message' => __('passwords.reset')]);
     }
 
@@ -87,7 +89,7 @@ class PasswordResetControllerTest extends TestCase
             'token' => 'invalid-token',
         ]);
 
-        $response->assertStatus(400)
+        $response->assertStatus(Response::HTTP_BAD_REQUEST)
             ->assertJson(['message' => __('passwords.token')]);
     }
 
@@ -100,7 +102,7 @@ class PasswordResetControllerTest extends TestCase
             'token' => '',
         ]);
 
-        $response->assertStatus(422);
+        $response->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY);
     }
 
     public function test_reset_password_request_returns_error_if_email_does_not_exist()
@@ -112,10 +114,10 @@ class PasswordResetControllerTest extends TestCase
             'token' => 'valid-token',
         ]);
 
-        $response->assertStatus(404)
+        $response->assertStatus(Response::HTTP_NOT_FOUND)
             ->assertJson([
                 'success' => false,
-                'data' => 'We can not find any account with this email',
+                'message' => 'We can not find any account with this email',
             ]);
     }
 }

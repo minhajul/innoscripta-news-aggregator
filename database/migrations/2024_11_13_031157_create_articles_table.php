@@ -27,6 +27,7 @@ return new class extends Migration
             $table->index('title');
             $table->index('slug');
             $table->index('source');
+            $table->index('category');
             $table->index('author');
         });
     }
