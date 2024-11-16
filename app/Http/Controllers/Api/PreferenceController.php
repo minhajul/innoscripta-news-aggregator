@@ -9,6 +9,7 @@ use App\Models\Preference;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Gate;
 
 /**
  * @group Preference
@@ -20,7 +21,6 @@ class PreferenceController extends Controller
     /**
      * Get Preferences
      *
-     *
      * @authenticated
      *
      * @return JsonResponse
@@ -30,7 +30,7 @@ class PreferenceController extends Controller
         $preferences = $request->user()->preferences;
 
         return response()->json([
-            'success' => (bool) $preferences->count(),
+            'success' => (bool)$preferences->count(),
             'message' => $preferences->count() ? 'Request successful' : 'No preference found',
             'data' => PreferenceResource::collection($preferences),
         ], $preferences->count() ? Response::HTTP_OK : Response::HTTP_NOT_FOUND);
@@ -65,13 +65,22 @@ class PreferenceController extends Controller
     /**
      * Get Single Preference
      *
-     *
      * @authenticated
      *
      * @return JsonResponse
      */
     public function show(Preference $preference)
     {
+        $response = Gate::inspect('view', $preference);
+
+        if (!$response->allowed()) {
+            return response()->json([
+                'success' => false,
+                'message' => $response->message(),
+                'data' => null
+            ], Response::HTTP_FORBIDDEN);
+        }
+
         return response()->json([
             'success' => true,
             'message' => 'Request successful',
@@ -81,7 +90,6 @@ class PreferenceController extends Controller
 
     /**
      * Update Preference
-     *
      *
      * @bodyParam source string required Insert source Example: BBC
      * @bodyParam category string required Insert category Example: tech
@@ -93,6 +101,16 @@ class PreferenceController extends Controller
      */
     public function update(PreferenceRequest $request, Preference $preference)
     {
+        $response = Gate::inspect('update', $preference);
+
+        if (!$response->allowed()) {
+            return response()->json([
+                'success' => false,
+                'message' => $response->message(),
+                'data' => null
+            ], Response::HTTP_FORBIDDEN);
+        }
+
         $preference = tap($preference)
             ->update($request->only('source', 'category', 'author'));
 
@@ -106,13 +124,22 @@ class PreferenceController extends Controller
     /**
      * Destroy Preference
      *
-     *
      * @authenticated
      *
      * @return JsonResponse
      */
     public function destroy(Preference $preference)
     {
+        $response = Gate::inspect('delete', $preference);
+
+        if (!$response->allowed()) {
+            return response()->json([
+                'success' => false,
+                'message' => $response->message(),
+                'data' => null
+            ], Response::HTTP_FORBIDDEN);
+        }
+
         $preference->delete();
 
         return response()->json([
