@@ -24,6 +24,9 @@ class LoginController extends Controller
      *
      * @bodyParam email string required Insert email Example: test@example.com
      * @bodyParam password string required Insert password Example: password
+     *
+     * @param LoginRequest $request
+     * @return JsonResponse
      */
     public function index(LoginRequest $request): JsonResponse
     {
@@ -59,6 +62,8 @@ class LoginController extends Controller
      * Logout
      *
      * @authenticated
+     * @param Request $request
+     * @return JsonResponse
      */
     public function logout(Request $request): JsonResponse
     {

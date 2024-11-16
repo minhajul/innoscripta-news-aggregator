@@ -3,6 +3,7 @@
 namespace Tests\Feature\Auth;
 
 use App\Models\User;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\Sanctum;
 use Tests\TestCase;
@@ -13,7 +14,7 @@ class LoginControllerTest extends TestCase
     {
         $response = $this->json('POST', '/api/login');
 
-        $response->assertStatus(422)
+        $response->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY)
             ->assertJson([
                 'success' => false,
                 'data' => [
@@ -30,10 +31,10 @@ class LoginControllerTest extends TestCase
             'password' => 'password',
         ]);
 
-        $response->assertStatus(400)
+        $response->assertStatus(Response::HTTP_BAD_REQUEST)
             ->assertJson([
                 'success' => false,
-                'data' => 'We could not find any account with this email!',
+                'message' => 'We could not find any account with this email!',
             ]);
     }
 
@@ -49,10 +50,10 @@ class LoginControllerTest extends TestCase
             'password' => 'wrong-password',
         ]);
 
-        $response->assertStatus(401)
+        $response->assertStatus(Response::HTTP_UNAUTHORIZED)
             ->assertJson([
                 'success' => false,
-                'data' => 'Credential does not match',
+                'message' => 'Credential does not match',
             ]);
     }
 
@@ -68,7 +69,7 @@ class LoginControllerTest extends TestCase
             'password' => 'correct-password',
         ]);
 
-        $response->assertStatus(200)
+        $response->assertStatus(Response::HTTP_OK)
             ->assertJson([
                 'success' => true,
                 'data' => [
@@ -93,7 +94,7 @@ class LoginControllerTest extends TestCase
 
         $response = $this->postJson('/api/logout');
 
-        $response->assertStatus(200)
+        $response->assertStatus(Response::HTTP_OK)
             ->assertJson([
                 'success' => true,
                 'data' => null,

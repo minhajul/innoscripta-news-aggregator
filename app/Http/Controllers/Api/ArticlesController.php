@@ -24,7 +24,6 @@ class ArticlesController extends Controller
     /**
      * Get Articles
      *
-     *
      * @return JsonResponse
      */
     public function index(Request $request)

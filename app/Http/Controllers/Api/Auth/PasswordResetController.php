@@ -20,7 +20,10 @@ class PasswordResetController extends Controller
     /**
      * Send Password Reset Link
      *
+     * @param Request $request
      * @bodyParam email string required Insert email Example: test@example.com
+     *
+     * @return JsonResponse
      */
     public function sendResetLink(Request $request): JsonResponse
     {
@@ -33,7 +36,8 @@ class PasswordResetController extends Controller
         if (! $user) {
             return response()->json([
                 'success' => false,
-                'data' => 'We can not find any account with this email',
+                'message' => 'We can not find any account with this email',
+                'data' => null
             ], Response::HTTP_NOT_FOUND);
         }
 
@@ -42,16 +46,20 @@ class PasswordResetController extends Controller
         );
 
         return $status === Password::RESET_LINK_SENT
-            ? response()->json(['message' => __($status)])
-            : response()->json(['message' => __($status)], Response::HTTP_BAD_REQUEST);
+            ? response()->json(['success' => true, 'message' => __($status), 'data' => null])
+            : response()->json(['success' => false, 'message' => __($status), 'data' => null], Response::HTTP_BAD_REQUEST);
     }
 
     /**
      * Reset Password
      *
+     * @param Request $request
+     *
      * @bodyParam email string required Insert email Example: test@example.com
      * @bodyParam password string required Insert password Example: password
      * @bodyParam password_confirmation string required Insert password confirmation Example: password
+     *
+     * @return JsonResponse
      */
     public function resetPassword(Request $request): JsonResponse
     {
