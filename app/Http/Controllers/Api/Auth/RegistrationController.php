@@ -22,8 +22,6 @@ class RegistrationController extends Controller
      * @bodyParam email string required Insert email Example: test@example.com
      * @bodyParam password string required Insert password Example: password
      * @bodyParam password_confirmation string required Insert password confirmation Example: password
-     * @param RegistrationRequest $request
-     * @return JsonResponse
      */
     public function index(RegistrationRequest $request): JsonResponse
     {

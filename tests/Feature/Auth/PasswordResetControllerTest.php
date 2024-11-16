@@ -38,7 +38,7 @@ class PasswordResetControllerTest extends TestCase
             ->assertJson([
                 'success' => false,
                 'message' => 'We can not find any account with this email',
-                'data' => null
+                'data' => null,
             ]);
     }
 

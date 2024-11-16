@@ -30,7 +30,7 @@ class PreferenceController extends Controller
         $preferences = $request->user()->preferences;
 
         return response()->json([
-            'success' => (bool)$preferences->count(),
+            'success' => (bool) $preferences->count(),
             'message' => $preferences->count() ? 'Request successful' : 'No preference found',
             'data' => PreferenceResource::collection($preferences),
         ], $preferences->count() ? Response::HTTP_OK : Response::HTTP_NOT_FOUND);
@@ -73,11 +73,11 @@ class PreferenceController extends Controller
     {
         $response = Gate::inspect('view', $preference);
 
-        if (!$response->allowed()) {
+        if (! $response->allowed()) {
             return response()->json([
                 'success' => false,
                 'message' => $response->message(),
-                'data' => null
+                'data' => null,
             ], Response::HTTP_FORBIDDEN);
         }
 
@@ -103,11 +103,11 @@ class PreferenceController extends Controller
     {
         $response = Gate::inspect('update', $preference);
 
-        if (!$response->allowed()) {
+        if (! $response->allowed()) {
             return response()->json([
                 'success' => false,
                 'message' => $response->message(),
-                'data' => null
+                'data' => null,
             ], Response::HTTP_FORBIDDEN);
         }
 
@@ -132,11 +132,11 @@ class PreferenceController extends Controller
     {
         $response = Gate::inspect('delete', $preference);
 
-        if (!$response->allowed()) {
+        if (! $response->allowed()) {
             return response()->json([
                 'success' => false,
                 'message' => $response->message(),
-                'data' => null
+                'data' => null,
             ], Response::HTTP_FORBIDDEN);
         }
 
