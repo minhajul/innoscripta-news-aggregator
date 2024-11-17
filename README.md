@@ -35,5 +35,5 @@ Fetching data from different sources like The Guardian, New York Times, and BBC.
 3. Then run  `./vendor/bin/sail up` to boot up docker images and server
 4. Create a file named as .env and copy the content of .env.example to newly created .env file
 5. Then execute `./vendor/bin/sail php artisan key:generate` on your terminal to generate environment key
-6. Execute `./vendor/bin/sail php artisan migrate:fresh --seed` on your terminal to migrate the database and seed dummy data
+6. Execute `./vendor/bin/sail php artisan migrate --seed` on your terminal to migrate the database and seed dummy data
 7. Execute this command `./vendor/bin/sail php artisan scribe:generate` to generate the docs and go to `http://localhost/docs` to see it. It's running!
