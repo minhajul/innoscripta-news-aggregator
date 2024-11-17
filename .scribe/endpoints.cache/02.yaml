@@ -45,7 +45,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer fE5gVPD146hab3ceZ8avdk6'
+      - 'Bearer vE65f6e1PaVDZkc348hagbd'
     controller: null
     method: null
     route: null
@@ -114,7 +114,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Da4e1dkZ68Pcav6EV5fgbh3'
+      - 'Bearer PD18dbaVc5ehf46Zgk36aEv'
     controller: null
     method: null
     route: null
@@ -143,14 +143,14 @@ endpoints:
         name: preference_id
         description: 'The ID of the preference.'
         required: true
-        example: 1
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      preference_id: 1
+      preference_id: 9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -170,7 +170,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer kP58bdfcg4Vv3Z6a6D1ahEe'
+      - 'Bearer d38kbaD4fav65ecVZ6hPE1g'
     controller: null
     method: null
     route: null
@@ -199,14 +199,14 @@ endpoints:
         name: preference_id
         description: 'The ID of the preference.'
         required: true
-        example: 18
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      preference_id: 18
+      preference_id: 9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -250,7 +250,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aPadkDvhg61EV8cZe5b6f43'
+      - 'Bearer gf3D15646Z8EhcvaPbkeVda'
     controller: null
     method: null
     route: null
@@ -279,14 +279,14 @@ endpoints:
         name: preference_id
         description: 'The ID of the preference.'
         required: true
-        example: 2
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      preference_id: 2
+      preference_id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -297,7 +297,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Db66ef185gc4PkdZEaavV3h'
+      - 'Bearer cDV48va6afke6hP53Z1gbdE'
     controller: null
     method: null
     route: null
