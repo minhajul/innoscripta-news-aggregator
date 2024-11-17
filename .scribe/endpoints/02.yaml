@@ -43,7 +43,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer e6EakVgca5d3bDP1hZv468f'
+      - 'Bearer fE5gVPD146hab3ceZ8avdk6'
     controller: null
     method: null
     route: null
@@ -112,7 +112,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8a65gvD41eaE6k3PcfhdVbZ'
+      - 'Bearer Da4e1dkZ68Pcav6EV5fgbh3'
     controller: null
     method: null
     route: null
@@ -168,7 +168,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6DEgd4k1Va35vca8ZfPhe6b'
+      - 'Bearer kP58bdfcg4Vv3Z6a6D1ahEe'
     controller: null
     method: null
     route: null
@@ -197,14 +197,14 @@ endpoints:
         name: preference_id
         description: 'The ID of the preference.'
         required: true
-        example: 1
+        example: 18
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      preference_id: 1
+      preference_id: 18
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -248,7 +248,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer V38v64ak1eag5cEhDbfdZ6P'
+      - 'Bearer aPadkDvhg61EV8cZe5b6f43'
     controller: null
     method: null
     route: null
@@ -277,14 +277,14 @@ endpoints:
         name: preference_id
         description: 'The ID of the preference.'
         required: true
-        example: 1
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      preference_id: 1
+      preference_id: 2
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -295,7 +295,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer kdh8Eb631va6DV4Pfe5gZac'
+      - 'Bearer Db66ef185gc4PkdZEaavV3h'
     controller: null
     method: null
     route: null
